@@ -1,0 +1,1 @@
+I would like to see here solution with 2 sortings: quick-sort and merge-sort.
