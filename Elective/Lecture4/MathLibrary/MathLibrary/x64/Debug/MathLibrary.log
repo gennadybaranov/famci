@@ -1,0 +1,6 @@
+﻿  stdafx.cpp
+  dllmain.cpp
+  MathLibrary.cpp
+     Creating library E:\BSU\famci\Lecture4\MathLibrary\x64\Debug\MathLibrary.lib and object E:\BSU\famci\Lecture4\MathLibrary\x64\Debug\MathLibrary.exp
+  MathLibrary.vcxproj -> E:\BSU\famci\Lecture4\MathLibrary\x64\Debug\MathLibrary.dll
+  MathLibrary.vcxproj -> E:\BSU\famci\Lecture4\MathLibrary\x64\Debug\MathLibrary.pdb (Full PDB)
