@@ -1,0 +1,148 @@
+h1.sitename{
+ font-size:500%;
+ font-family:Impact;
+ text-align:center;
+ color:SlateGrey;
+}
+hr.sitename{
+  width:50%;
+}
+div.hrefs{
+  text-align:center;
+  margin-top: 20px;
+  font-family:Arial;
+  color:SlateGrey;
+  font-size:200%
+}
+
+
+/*Здесь я пытался вставить подсветку и другой цвет ссылки */
+.href {
+  color: SlateGrey;
+  margin-right: 130px;
+}
+.href:link{
+  text-decoration: none;
+}
+.href:hoover{
+  text-decoration: none;
+  color: green;
+}
+/*Но оно ни в какую не хочет отображаться */
+
+
+img.background{
+  img-align:center;
+  width:100%
+}
+div.left1{
+  width:650px;
+  text-align:right;
+}
+h2.h2_1{
+  font-family:Impact;
+  color:Red;
+  font-size:300%;
+}
+p.p2_1{
+  font-family:'Arial';
+  color:SlateGrey;
+  font-size:125%;
+}
+
+div.right1{
+  float:right;
+  width:650px;
+  text-align:left;
+}
+h2.h2_2{
+  font-family:Arial;
+  color:Orange;
+  font-size:200%;
+}
+p.p2_2{
+  font-family:'Times New Roman';
+  color:SlateGrey;
+  font-size:125%;
+}
+.button {
+  text-decoration: none;
+  font-weight: bold;
+  margin: 20px 0;
+  display: inline-block;
+  background: green;
+  padding: 9px 14px;
+  border-radius: 4px;
+  color: white;
+}
+img.pikcha{
+  width:40px;
+  height:40px;
+  alt:note;
+  vertical-align:middle;
+}
+
+div.left2{
+  text-align:center;
+  background-color:#ffff68;
+  float:right;
+  width:444px;
+  height:318px;
+}
+div.middle2{
+  text-align:center;
+  background-color:#ffff68;
+  float:right;
+  width:445px;
+  height:318px;
+}
+div.h3{
+  font-family:'MV BOLI';
+  color:SlateGrey;
+}
+p.p3{
+  font-family:'MV BOLI';
+  color:SlateGrey;
+}
+
+img.small_pict{
+  border-radius: 10px;
+  border: 2px #ccc solid;
+  box-shadow: 0 0 10px #444;
+  width:40px;
+  height:40px;
+}
+p.p4{
+  font-family:COMIC SANS MS;
+  text-align:center;
+  color:White;
+  font-size:150%
+}
+p.p4_1{
+  font-family:COMIC SANS MS;
+  text-align:center;
+  color:White;
+}
+p.p5{
+  font-family:SEGOE SCRIPT;
+  color:White;
+  font-size:300%
+}
+img.last_pict{
+   width:50%;
+   border: 5px solid #434343;
+   padding: 10px;
+   background: #e3e3e3;
+   -moz-border-radius: 50px;
+   -webkit-border-radius: 50px;
+   width: 300px
+}
+div.last_div1{
+  text-align:left;
+  float:right;
+  width:600px;
+}
+div.last_div2{
+  text-align: center;
+  width:600px;
+}
