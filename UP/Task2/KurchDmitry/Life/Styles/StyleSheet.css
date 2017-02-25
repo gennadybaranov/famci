@@ -1,0 +1,28 @@
+﻿body {
+}
+#field
+{
+border: 2px solid #000000;
+background-color:#FFF0F5;
+
+}
+.container
+{
+	margin-left:100px;
+	text-align:center;
+	border: 1px solid #000000;
+	background-color:#FFDAB9;
+	padding: 10px 10px;
+	float:left;
+}
+.generation
+{
+	color:#191970;
+}
+#generationNum
+{
+	color:#191970;
+}
+.canvas
+{
+}

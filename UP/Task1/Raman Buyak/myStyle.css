@@ -1,0 +1,155 @@
+#header{
+	height: 50px;
+	margin-top: 50px;
+	border-top-left-radius: 9px;
+	border-top-right-radius: 9px;
+}
+textarea.messagebox{
+	background-color: #222222;
+	border:1px solid gray;
+	border-radius: 5px;
+	color: gray;
+	width: 495px;
+	height: 150px;
+	margin-top: 20px;
+	margin-left: 65px;
+	text-align:left top;
+}
+.wikiref
+{
+	text-align:center; padding-top:10px; padding-bottom:20px;
+}
+.Textcenter
+{
+	text-align:center;
+}
+.bgcolor22
+{
+	background-color:#222222;
+}
+.nameinput
+{
+	margin-right:55px;
+	margin-left:65px;
+}
+.formmargin
+{
+	margin-top:15px;
+}
+.fightmefont
+{
+	color:white;
+	font-family:cursive;
+	font-size:25px;
+	text-align:center;
+	margin-left:245px;
+	text-shadow: 2px 1px gray;
+}
+input{
+	background-color: #222222;
+	border:1px solid gray;
+	border-radius: 5px;
+	color: gray;
+	width:220px;
+	height: 25px;
+}
+.min
+{
+  width: 60px;
+  height: 60px;
+}
+h1
+{
+	font-family:cursive;
+  font-size:25px;
+  color: white;
+  align:middle;
+	text-shadow: 2px 1px gray;
+}
+div.middle
+{
+  margin: 0 auto;
+  width:650px;
+}
+div.Main_photo
+{
+  background-image: url("images/cena_profileJJpig.jpg");
+  width: 650px;
+  height: 366px;
+}
+ul
+{
+width:100%;
+list-style-type:none;
+margin: 0;
+padding: 0;
+overflow:hidden;
+}
+.table
+{
+  flex: 1;
+}
+li
+{
+  float:left;
+}
+li a
+{
+	font-weight: bold;
+  display: block;
+  color: white;
+  text-align: center;
+  padding:12px;
+  text-decoration:none;
+}
+input:hover
+{
+	color: orange;
+	border-color: white;
+}
+input.submit
+{
+	display:block;margin-left:230px; margin-top:25px;margin-bot:20px;width:150px;
+}
+textarea:hover
+{
+	color: orange;
+	border-color: white;
+}
+footer{
+	background-color:black;width:650px;margin:auto;
+}
+li a:hover
+{
+  background-color: #002500;
+}
+body
+{
+  background-attachment: fixed;
+  background-image:url("images/background2.png");
+}
+button{
+	color: #888888;
+  border-radius: 5px;
+  background-color: #111111;
+	border: 3px solid #003300;
+	margin:15px;
+}
+button:hover{
+	color: orange;
+	border-color: white;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+p
+{
+  color: gray;
+}
+.footer_style
+{
+  flex: 1;
+	text-align: center;;
+	margin-right: 20px;
+}
