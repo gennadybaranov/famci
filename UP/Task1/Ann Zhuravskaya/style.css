@@ -1,0 +1,171 @@
+
+body{
+	background: url(images/background.jpg);
+}
+div.main{
+	
+	margin-left: 200px;
+	margin-right: 200px;
+
+}
+header{
+	padding: 0px  10px;
+	background-color: white;
+	margin: 0px 0px 30px;
+	display: flex;
+	
+	//height: 80px;
+	//min-height: 80px;
+	//max-height: 80px;
+	
+}
+header a{
+	color: black;
+	text-decoration: none;
+	padding:0px 5px;
+	margin: 0px 15px;
+	font-size: 32px;
+	
+
+}
+.points{
+	display: flex;
+	overflow: hidden;
+	margin: 70px 0px 0px 100px;
+	text-align: right;
+
+}
+
+.point{
+	text-align: left;
+
+}
+
+.point h1{
+margin-left: 40px;
+font-size: 64px;	
+color: black;
+}
+
+
+div.photo{
+	padding: 0px;
+	margin: 0px;
+}
+
+ .photo img{
+	width: 100%;
+	height: auto;
+}
+.about{
+	background-color: white;
+	background-size: auto;
+	text-align: center;
+	margin: 30px 0px 0px;
+	overflow: hidden;
+}
+.about h1{
+	margin: 10px 0px 0px 0px;
+}
+.about h4{
+		color: black; 
+		font-size: 20px; 
+		font-family: «Libre Baskerville», serif; 
+		line-height: 30px; 
+		text-shadow: 0 1px 1px #fff; 
+		padding:0px 5px; 
+}
+.about p{
+	 
+		 
+		text-shadow: 0 1px 1px #fff; 
+		padding:0px 5px;
+		font-weight: bold; 
+		border: 2px ridge black;
+		margin: 15px 520px;
+
+}
+
+.about a{
+	color: black;
+	text-decoration: none;
+	font-size: 20px; 
+	font-family: «Libre Baskerville», serif; 
+
+}
+.portfolio_photos{
+	display: flex;
+	padding-right: 0px;
+	padding-left: 0px;
+	justify-content: space-around;
+	flex:auto;
+}
+
+.portfolio{
+	background-color: #3c4454;
+}
+.portfolio h1{
+	color: white;
+	padding-top: 10px;
+	margin: 0px;
+	text-align: center;
+}
+.portfolio img{
+border-radius: 100%;
+overflow: hidden;
+//max-width: 20px ;
+//min-width: 100px ;
+height: 200px;
+padding: 0px;
+margin:20px;
+border: 6px ridge black;
+}
+
+
+.input, .input1{
+	border: 4px ridge black;
+	color: black;
+	text-align: left;
+	font-weight: bold;
+}
+
+.input{
+	overflow: hidden;
+    display: inline;
+    width:626px;
+    height: 60px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.input1{
+	width:1260px;
+    height: 200px;
+}
+
+.forms {
+	background-color: black;
+	height: 375px;
+
+}
+
+.submit_bottom {
+	color: black;
+	text-decoration: none;
+	font-weight: bold; 
+	border: 2px ridge black;
+	margin: 15px 600px;
+	background-color: white;
+	padding-left: 5px;
+	padding-right: 5px;
+
+}
+footer{
+	background-color: white;
+    margin: 0px 0px 0px 0px;
+    text-align: right;
+    padding-right: 30px;
+    font-weight: bold;
+}
+
+
