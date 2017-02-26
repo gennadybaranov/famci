@@ -1,91 +1,79 @@
-var my_canvas = $("#canvas")[0];
-var context = my_canvas.getContext('2d');
+var myCanvas = $("#canvas")[0];
+var context = myCanvas.getContext('2d');
 
-var y = 20;
-var x = 20;
-for (var i = 1; i < 20; i++) {
-  context.moveTo(0, y);
-  context.lineTo(400, y);
-  y += 20;
-}
+var canvasWidth = myCanvas.width;
+var canvasHeight = myCanvas.height;
+var horizontalSize = 20;
+var verticalSize = 20;
+var cellHeight = canvasHeight / verticalSize;
+var cellWidth = canvasWidth / horizontalSize;
 
-for (var i = 1; i < 20; i++) {
-  context.moveTo(x, 0);
-  context.lineTo(x, 400);
-  x += 20;
-}
+var array = [];
+var interval;
 
-/*
-my_canvas.addEventListener("mousedown", getPosition, false);
+var startButton = document.getElementById("start");
+var stopButton = document.getElementById("stop");
 
-function getPosition(event)
-{
-  var x = event.x;
-  var y = event.y;
+var generation = document.getElementById("generationNum");
+var generationNum = 1;
 
-  var canvas = document.getElementById("canvas");
+startButton.addEventListener("click", start);
+stopButton.addEventListener("click", stop);
 
-  x -= canvas.offsetLeft;
-  y -= canvas.offsetTop;
+(function () {
+  for (var i = 1; i < verticalSize; i++) {
+    var horizontalLine = cellHeight;
+    context.moveTo(0, horizontalLine);
+    context.lineTo(canvasWidth, horizontalLine);
+    horizontalLine += cellHeight;
+  }
 
-  alert("x:" + x + " y:" + y);
-}*.
-
- /*
-$('.canvas').bind('click', function (ev) {
-
-  var $div =(ev.target);
-  var $display = $div.find('.display');
-
-  var offset = $div.offset();
-  var x = ev.clientX - offset.left;
-  var y = ev.clientY - offset.top;
-
-  $display.text('x: ' + x + ', y: ' + y);
-});*/
+   for (var i = 1; i < horizontalSize; i++) {
+   var verticalLine = cellWidth;
+   context.moveTo(verticalLine, 0);
+   context.lineTo(verticalLine, canvasHeight);
+   verticalLine += cellWidth;
+  }
+})();
 
 context.stroke();
 
-my_canvas.addEventListener("click", getClickPosition, false);
+myCanvas.addEventListener("click", getClickPosition, false);
 
 function getClickPosition(e) {
-    var x = e.clientX;
-    var y = e.clientY;
+    var xMouse = e.clientX;
+    var yMouse = e.clientY;
 
-    x -= canvas.offsetLeft;
-    y -= canvas.offsetTop;
+    xMouse -= canvas.offsetLeft;
+    yMouse -= canvas.offsetTop;
 
-    array[Math.floor(x/20)][Math.floor(y/20)] = !array[Math.floor(x/20)][Math.floor(y/20)];
+    array[Math.floor(xMouse/cellWidth)][Math.floor(yMouse/cellHeight)] = !array[Math.floor(xMouse/cellWidth)][Math.floor(yMouse/cellHeight)];
     redraw();
 }
 
-var array = [];
-for (var i = 0; i < 20; i++) {
+for (var i = 0; i < horizontalSize; i++) {
   array.push([]);
-  for (var j  = 0; j < 20; j++) {
+  for (var j  = 0; j < verticalSize; j++) {
     array[i].push(false);
   }
 }
 
 function redraw() {
-  for (var i = 0; i < 20; i++) {
-    for (var j  = 0; j < 20; j++) {
-      context.fillStyle = array[i][j] ? "#FFFF00" : "#888888"
-      context.fillRect(i * 20, j * 20, 19, 19);
+  for (var i = 0; i < horizontalSize; i++) {
+    for (var j  = 0; j < verticalSize; j++) {
+      context.fillStyle = array[i][j] ? "#FFFF00" : "#888888";
+      context.fillRect(i * cellWidth, j * cellHeight, cellWidth - 1, cellHeight - 1);
     }
   }
 }
-var startButton = document.getElementById("start");
-var stopButton = document.getElementById("stop");
-
 
 function step() {
     function checkAround(x, y) {
       var number = 0;
       for (var i = 0; i < 8; i++) {
-        var dx = [-1, 0, 1, 1, 1, 0, -1, -1][i]
-        var dy = [-1, -1, -1, 0, 1, 1, 1, 0][i]
-        if (array[(x + dx + 20) % 20][(y + dy + 20) % 20]) {
+        var nearestX = [-1, 0, 1, 1, 1, 0, -1, -1][i];
+        var nearestY = [-1, -1, -1, 0, 1, 1, 1, 0][i];
+        if (array[(x + nearestX + cellWidth) % cellWidth][(y + nearestY + cellHeight) % cellHeight]) {
           number++;
         }
       }
@@ -93,33 +81,26 @@ function step() {
     }
 
     var next = [];
-    for (var i = 0; i < 20; i++) {
+    for (var i = 0; i < horizontalSize; i++) {
       next.push([]);
-      for (var j  = 0; j < 20; j++) {
+      for (var j  = 0; j < verticalSize; j++) {
         next[i].push(
           (array[i][j] && (checkAround(i, j) == 3 || checkAround(i, j) == 2)) ||
           (!array[i][j] && checkAround(i, j) == 3)
         );
       }
     }
-
     array = next;
+    generation.innerHTML = generationNum++;
     redraw();
 }
 
-var interval
-
 function start() {
-  interval = setInterval(step, 1000)
+  interval = setInterval(step, 1000);
 }
 
 function stop() {
   clearInterval(interval);
 }
-
-
-startButton.addEventListener("click", start);
-stopButton.addEventListener("click", stop);
-
 
 redraw();
