@@ -1,0 +1,26 @@
+﻿<!DOCTYPE>
+<html>
+<head>
+    <script src="Scripts/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <link href="Styles/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <title></title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="canvas">
+            <canvas id="field" width="400" height="400"></canvas>
+        </div>
+        <div>
+            <input type="button" value="Start" id="start" />
+            <input type="button" value="Stop" id="stop" />
+            <input type="button" value="Random" id="random" />
+            <label class="generation">
+                Generation:<div id="gener"></div>
+            </label>
+            <span id="generationNum"></span>
+        </div>
+    </div>
+    <script src="Scripts/life.js"></script>
+</body>
+</html>
