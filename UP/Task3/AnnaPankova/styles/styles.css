@@ -1,1 +1,69 @@
-﻿
+body {
+  margin: 0;
+  background-color: #E3E3E3;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+}
+
+.wrapper {
+  flex:auto;
+  display: flex;
+  position: relative;
+  min-height: 1px;
+}
+
+.wrapper .tableWrapper {
+  width: 300px;
+  margin: 20px;
+  margin-right: 0;
+  flex-shrink: 0;
+  overflow: auto;
+  background-color: #EEEEEE;
+  border: 1px solid black;
+}
+.wrapper .tableWrapper table {
+  width: 100%;
+}
+
+#header {
+  background: linear-gradient(#333333, #555555);
+  color: white;
+  text-align: left;
+  padding: 4px 20px;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#columns {
+  font: bold 11px "Helvetica Roman";
+  background: linear-gradient(#B9B9B9, #ADADAD);
+}
+
+.cells {
+  width: 30%;
+}
+
+.company {
+  font-size: 14px;
+  margin-left: 20px;
+  font-family: "Helvetica Roman";
+  color: #A2A2A2;
+}
+
+.numbers {
+  font-family: "Helvetica Roman"
+  font-size: 17px;
+  text-align: center;
+}
+
+.hr {
+  height: 1px;
+  background-color: #CCCCCC;
+  margin:0;
+}
+
+.buttons {
+}
