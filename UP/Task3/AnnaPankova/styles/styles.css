@@ -12,6 +12,7 @@ body {
   display: flex;
   position: relative;
   min-height: 1px;
+  transition: transform 0.5s;
 }
 
 .wrapper .tableWrapper {
@@ -22,8 +23,12 @@ body {
   overflow: auto;
   background-color: #EEEEEE;
   border: 1px solid black;
+  transition: opacity 0.5s;
+  border-radius: 6px;
 }
+
 .wrapper .tableWrapper table {
+   border-collapse: collapse;
   width: 100%;
 }
 
@@ -66,4 +71,18 @@ body {
 }
 
 .buttons {
+  text-align: center;
+}
+
+.button {
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 20px 10px;
+  width: 15px;
+  height: 15px;
+}
+
+.button:hover {
+  background-color: #ccc;
 }
