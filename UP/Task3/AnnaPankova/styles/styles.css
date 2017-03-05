@@ -32,18 +32,20 @@ body {
   width: 100%;
 }
 
-#header {
+.header {
   background: linear-gradient(#333333, #555555);
   color: white;
   text-align: left;
   padding: 4px 20px;
-  font-family: Helvetica;
+  font-family: Helvetica, sans-serif;
   font-size: 16px;
   font-weight: bold;
 }
 
-#columns {
-  font: bold 11px "Helvetica Roman";
+.columns {
+  font-weight: bold;
+  font-size: 11px;
+  font-family: "Helvetica Roman", serif;
   background: linear-gradient(#B9B9B9, #ADADAD);
 }
 
@@ -54,12 +56,12 @@ body {
 .company {
   font-size: 14px;
   margin-left: 20px;
-  font-family: "Helvetica Roman";
+  font-family: "Helvetica Roman", serif;
   color: #A2A2A2;
 }
 
 .numbers {
-  font-family: "Helvetica Roman"
+  font-family: "Helvetica Roman", serif;
   font-size: 17px;
   text-align: center;
 }
@@ -74,7 +76,7 @@ body {
   text-align: center;
 }
 
-.button {
+.buttons div {
   background-color: white;
   border-radius: 50%;
   display: inline-block;
@@ -83,6 +85,27 @@ body {
   height: 15px;
 }
 
-.button:hover {
+.buttons .active {
+    background-color: #aaa;
+}
+
+.buttons *:hover {
   background-color: #ccc;
+}
+
+.green {
+  color: #339900;
+}
+.red {
+  color: #E80000;
+}
+
+.title {
+  background: linear-gradient(#333333, #555555);
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-family: "Helvetica";
+  font-weight: bold;
+  font-size: 24px;
 }

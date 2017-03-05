@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 var canvas = document.getElementById("field");
 var context = canvas.getContext('2d');
 
@@ -45,7 +45,7 @@ function getClickPosition(e)
   draw();
 }
 canvas.addEventListener("click",getClickPosition,false);
-=======
+
 $(function() {
     var canvas = document.getElementById("field");
     var Context = canvas.getContext('2d');
@@ -150,4 +150,4 @@ $(function() {
     $('#start').click(begin);
     $('#stop').click(end);
 });
->>>>>>> 90ef329285821a57ce39b2f4fd4fa99c74edc566
+
