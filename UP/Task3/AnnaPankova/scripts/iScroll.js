@@ -31,7 +31,6 @@
   wrapper.className = 'wrapper'
   body.appendChild(wrapper)
 
-
   for (var i = 0; i < xmlDoc.children[0].children.length; i++) {
     var tableWrapper = document.createElement('div')
 
@@ -122,6 +121,7 @@
   function generateButtons () {
     var buttons = document.getElementsByClassName('buttons')[0]
     var wrapper = document.getElementsByClassName('wrapper')[0]
+    numberOfTablesNow = Math.floor(window.innerWidth / tableWidth)
     var numberOfButtons = Math.ceil(wrapper.children.length / numberOfTablesNow)
     while (buttons.children.length > 0) {
       buttons.removeChild(buttons.children[0])
