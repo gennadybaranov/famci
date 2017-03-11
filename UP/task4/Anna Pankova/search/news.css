@@ -1,0 +1,23 @@
+.header {
+  color: black;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 100px;
+}
+
+.textContent {
+
+}
+
+.news {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
