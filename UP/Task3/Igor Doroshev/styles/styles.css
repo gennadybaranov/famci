@@ -1,0 +1,139 @@
+﻿body
+{
+	margin: 0;
+	overflow: hidden;
+	width: auto;
+	display: flex;
+ 	flex-direction: column;
+ 	max-height: 100vh;
+ 	background-color: #E3E3E3;
+}
+
+.title
+{
+	margin: 0px;
+	padding: 10px 0px 10px 0px;
+	background: linear-gradient(#333333, #555555);
+	text-align: center;
+	font: bold 24px Helvetica;
+	color: white;
+}
+
+.content
+{
+  	display: flex;
+	padding-top: 15px;
+	margin-bottom: 20px;
+	transition: transform 0.5s;
+}
+
+.wtable 
+{
+	border-radius: 5px;
+	margin: 0px 15px 0px 15px;
+	position: relative;
+	float: left;
+	width: 330px;
+	background-color: #EEEEEE;
+	box-shadow: 0 0 3px 2px #C1C1C1;
+	border: 1px solid black;
+	flex-shrink: 0;
+	overflow-y: auto;
+	transition: opacity 0.5s;
+}
+
+.table
+{
+	width: 100%;
+	border-collapse: collapse;
+	
+}
+
+.capture
+{
+	background: linear-gradient(#333333, #555555);
+	width: 100%;
+	margin: 0;
+	text-align: left;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font: bold 16px Helvetica;
+	color: white;
+}
+
+.theader
+{
+	font-weight: bold;
+	font-size: 11px;
+	font-family:  "Helvetica Roman";
+	width: 30%;
+}
+
+.cols
+{
+	background: linear-gradient(#B9B9B9, #ADADAD);
+}
+
+.hrow
+{
+	font-size: 14px;
+	font-family: "Helvetica Roman";
+	color: #A2A2A2;
+}
+
+.numbers
+{
+	font-size: 17px;
+	font-family: "Helvetica Roman";
+	text-align: center;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.red
+{
+	color: #EB0000;
+}
+
+.green
+{
+	color: #339900;
+}
+
+.btnbar
+{
+	background: linear-gradient(#666666, #444444);
+	text-align: center;
+	margin-top: 20px;
+}
+
+input[type="radio"] 
+{
+    display: none;
+}
+input[type="radio"] + label span 
+{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 10px 10px 10px 10px;
+
+}
+
+input[type="radio"] + label span 
+{
+     background-color: #E3E3E3;
+}
+
+input[type="radio"] + label:hover span
+{
+	background-color: #AAA;
+}
+
+input[type="radio"]:checked + label span
+{
+     background-color: #3D3D3D;
+}
