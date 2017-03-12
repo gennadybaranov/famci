@@ -1,166 +1,205 @@
-﻿document.addEventListener("DOMContentLoaded", function(){
-	var XMLString = window.poc.xmldata;
-	var parser = new DOMParser();
-	var xml = parser.parseFromString(XMLString, "application/xml");
+﻿(function(){
+	document.addEventListener("DOMContentLoaded", runScript);
+	function runScript(){
+		var XMLString = window.poc.xmldata;
+		var parser = new DOMParser();
+		var xml = parser.parseFromString(XMLString, "application/xml");
 
-	var wrap = document.createElement('div');
-	wrap.classList.add('wrap');
-	document.body.appendChild(wrap);
+		var wrap = document.createElement('div');
+		wrap.classList.add('wrap');
+		document.body.appendChild(wrap);
 
-	var pageHeader = document.createElement('div');
-	pageHeader.classList.add('pageHeader');
-	pageHeader.innerHTML = "Title / Header of a Lane";
-	wrap.appendChild(pageHeader);
+		var pageHeader = document.createElement('div');
+		pageHeader.classList.add('pageHeader');
+		pageHeader.innerHTML = "Title / Header of a Lane";
+		wrap.appendChild(pageHeader);
 
-	var tableContainer = document.createElement('div');
-	tableContainer.classList.add('tableContainer');
-	wrap.appendChild(tableContainer);
+		var tableContainer = document.createElement('div');
+		tableContainer.classList.add('tableContainer');
+		wrap.appendChild(tableContainer);
 
-	var scrollBar = document.createElement('div');
-	scrollBar.classList.add('scrollBar');
-	wrap.appendChild(scrollBar);
-	
-	var data = xml.getElementsByTagName('data')[0];
-	var tables = data.getElementsByTagName('dataTable');
-	
-	for (var i = 0; i < tables.length; i++)
-		addTable(tables[i]);
+		var scrollBar = document.createElement('div');
+		scrollBar.classList.add('scrollBar');
+		wrap.appendChild(scrollBar);
+		
+		var data = xml.getElementsByTagName('data')[0];
+		var tables = data.getElementsByTagName('dataTable');
+		
+		for (var i = 0; i < tables.length; i++)
+			addTable(tables[i]);
 
-	var curPage = 1;
-	makeButtons();
+		var buttonsWrap = document.createElement('div');
+		buttonsWrap.classList.add('buttonWrap');
 
-	// tableContainer.onmousedown = onMouseDown;
-	// tableContainer.onmouseup = onMouseUp;
+		var tableWidth = tableContainer.children[0].offsetWidth;;
+		var shownTablesNum;
+		var pagesNum;
+		var tableSideMargin = 20;
+		var curPage = undefined;
+		
+		renderPage();
 
-	// function onMouseDown(event){
-	// 	tableContainer.onmousemove = onMouseMove;
-	// 	var startX = event.clientX;
-	// }
+		function renderPage(){
+			setDisplayedNum();
+			makeButtons();
+			goToPage(0);		
+			window.addEventListener('resize', resize);
+		}	
 
-	// function onMouseMove(event){
-	// 	tableContainer.style.left = (tableContainer.offsetLeft + event.clientX - startX) + 'px';
-	// }
+		tableContainer.onmousedown = function(e){
+			var startX = e.clientX;
 
-	// function onMouseUp(event){
-	// 	tableContainer.onmousemove = null;
-	// }
+			tableContainer.onmousemove = function(e){
+				var dx = e.clientX - startX;
 
-	function addTable(xmlTable){
-		var tableWrap = document.createElement('div');
-		tableWrap.classList.add("tableWrap");
-		tableContainer.appendChild(tableWrap);
-
-		var curTable = document.createElement('table');
-		curTable.classList.add('table');
-		tableWrap.appendChild(curTable);	
-
-		var columns = xmlTable.getElementsByTagName('column');
-
-		// adding table header
-		var tableHeaderRow = curTable.insertRow();
-		var tableHeaderCell = tableHeaderRow.insertCell();
-		tableHeaderCell.innerHTML = xmlTable.getAttribute('name');
-		tableHeaderCell.classList.add('tableHeader');
-		tableHeaderCell.colSpan = columns.length;
-
-		// adding column names
-		var columnsNames = curTable.insertRow();
-		columnsNames.classList.add('columnsNames');
-		var rowAttributes = [];
-		for (var i = 0; i < columns.length; i++){
-			columnsNames.insertCell().innerHTML = columns[i].getAttribute('label');
-			rowAttributes[i] = columns[i].getAttribute('name');
+				tableContainer.onmouseup = function(){
+					if (dx > 0 && curPage > 0){
+						buttonsWrap.children[curPage].classList.remove('buttonActive');
+						goToPage (curPage - 1); // function changes curPage value
+						buttonsWrap.children[curPage].classList.add('buttonActive');
+					}
+					if (dx < 0 && curPage !== (pagesNum - 1)){
+						buttonsWrap.children[curPage].classList.remove('buttonActive');
+						goToPage(curPage + 1);
+						buttonsWrap.children[curPage].classList.add('buttonActive');
+					}
+					tableContainer.onmousemove = null;
+				}
+			}
+			e.preventDefault();
 		}
 
-		// adding rows with data
-		var rows = xmlTable.getElementsByTagName('row');
-		for (var i = 0; i < rows.length; i++){
-			var rowHeader = curTable.insertRow();	// adding row name
-			var headerCell = rowHeader.insertCell(); // try without cell
-			headerCell.innerHTML = rows[i].getAttribute('name');
-			headerCell.colSpan = columns.length;
-			headerCell.classList.add('rowHeader');
+		function addTable(xmlTable){
+			var tableWrap = document.createElement('div');
+			tableWrap.classList.add("tableWrap");
+			tableContainer.appendChild(tableWrap);
 
-			var curRow = curTable.insertRow();
-			curRow.classList.add('info');
-			for (var j = 0; j < columns.length; j++){
-				var cell = curRow.insertCell();
-				cell.innerHTML = rows[i].getAttribute(rowAttributes[j]);	
-				if (rowAttributes[j] === 'change' || rowAttributes[j] === 'percentChange'){
-					if (parseFloat(rows[i].getAttribute(rowAttributes[j])) < 0)
-						cell.classList.add('red');
-					if (parseFloat(rows[i].getAttribute(rowAttributes[j])) > 0)
-						cell.classList.add('green');
+			var curTable = document.createElement('table');
+			curTable.classList.add('table');
+			tableWrap.appendChild(curTable);	
+
+			var columns = xmlTable.getElementsByTagName('column');
+
+			// adding table header
+			var tableHeaderRow = curTable.insertRow();
+			var tableHeaderCell = tableHeaderRow.insertCell();
+			tableHeaderCell.innerHTML = xmlTable.getAttribute('name');
+			tableHeaderCell.classList.add('tableHeader');
+			tableHeaderCell.colSpan = columns.length;
+
+			// adding column names
+			var columnsNames = curTable.insertRow();
+			columnsNames.classList.add('columnsNames');
+			var rowAttributes = [];
+			for (var i = 0; i < columns.length; i++){
+				columnsNames.insertCell().innerHTML = columns[i].getAttribute('label');
+				rowAttributes[i] = columns[i].getAttribute('name');
+			}
+
+			// adding rows with data
+			var rows = xmlTable.getElementsByTagName('row');
+			for (var i = 0; i < rows.length; i++){
+				var rowHeader = curTable.insertRow();	// adding row name
+				var headerCell = rowHeader.insertCell(); // try without cell
+				headerCell.innerHTML = rows[i].getAttribute('name');
+				headerCell.colSpan = columns.length;
+				headerCell.classList.add('rowHeader');
+
+				var curRow = curTable.insertRow();
+				curRow.classList.add('info');
+				for (var j = 0; j < columns.length; j++){
+					var cell = curRow.insertCell();
+					cell.innerHTML = rows[i].getAttribute(rowAttributes[j]);	
+					if (rowAttributes[j] === 'change' || rowAttributes[j] === 'percentChange'){
+						if (parseFloat(rows[i].getAttribute(rowAttributes[j])) < 0)
+							cell.classList.add('red');
+						if (parseFloat(rows[i].getAttribute(rowAttributes[j])) > 0)
+							cell.classList.add('green');
+					}
 				}
 			}
 		}
-	}
 
-	function makeButtons(){
-		var tw = document.getElementsByClassName('tableWrap');
-		var width = tw[1].offsetWidth + 40; // + margin left
-		var displayingNum = Math.floor(tableContainer.offsetWidth / width);
-		var pagesNum = Math.ceil(tables.length / displayingNum);
-		
-		var buttonWrap = document.createElement('div');
-		buttonWrap.classList.add('buttonWrap');
-		scrollBar.appendChild(buttonWrap);
-		for (var i = 0; i < pagesNum; i++){
-			var cButton = document.createElement('div');
-			cButton.classList.add('button');
-			buttonWrap.appendChild(cButton);	
-			cButton.id = "btn" + i;
+		function makeButtons(){		
+			if (!scrollBar.hasChildNodes())
+				scrollBar.appendChild(buttonsWrap);
+			while (buttonsWrap.firstChild)
+				buttonsWrap.removeChild(buttonsWrap.firstChild);
 
-			(function(i){ // immediately invoked function expression. no need to pass 'i', it is visible. but still
-				var b = document.getElementById('btn' + i);
-				b.onmouseover = function(){
-					if (!b.classList.contains('buttonActive'))
-					b.classList.add('buttonHover');
-					// buttonWrap.style.transform = "translateX(20px)";
-				}
-				b.onmouseleave = function(){
-					b.classList.remove('buttonHover');
-				}
-				b.addEventListener('click', function(){
-					b.classList.add('buttonActive');
-					b.classList.remove('buttonHover');
-					// remove activeButton from other buttons
-					for (var j = 0; j < pagesNum; j++){ // pagesNum is also visible
-						var tmpB = document.getElementById('btn' + j);
-						if (tmpB != b)
-							tmpB.classList.remove('buttonActive');
+			for (var i = 0; i < pagesNum; i++){
+				var cButton = document.createElement('div');
+				cButton.classList.add('button');
+				buttonsWrap.appendChild(cButton);
+
+				(function(i){ // immediately invoked function expression. no need to pass 'i', it is visible. but still
+					var b = buttonsWrap.children[i];
+					b.onmouseover = function(){
+						if (!b.classList.contains('buttonActive'))
+						b.classList.add('buttonHover');
 					}
-					// shift tables
-					goToPage(i+1);
-				});
-			})(i);
+					b.onmouseleave = function(){
+						b.classList.remove('buttonHover');
+					}
+					b.addEventListener('click', function(){
+						b.classList.remove('buttonHover');
+						for (var j = 0; j < pagesNum; j++){
+							buttonsWrap.children[j].classList.remove('buttonActive');
+						}
+						b.classList.add('buttonActive');
+						goToPage(i);
+					});
+				})(i);
+
+				buttonsWrap.children[0].classList.add('buttonActive');
+			}
+		}
+
+		function setDisplayedNum(){
+			shownTablesNum = Math.floor(tableContainer.offsetWidth / (tableWidth + tableSideMargin*2));
+			pagesNum = Math.ceil(tables.length / shownTablesNum);
+		}
+
+		function goToPage (n){
+			if (curPage !== undefined){
+				tableContainer.style.transition = "transform 1s ease-out";
+				for (var i = 0; i < tables.length; i++)
+					tableContainer.children[i].style.transition = "opacity 1s ease";
+				}
+			else
+				curPage = n;
+
+			var first = (n)*shownTablesNum;
+			var last = first + shownTablesNum - 1;
+			if (last >= tables.length)
+				last = tables.length - 1;		
+			var shift = ((tableWidth + tableSideMargin*2) * shownTablesNum) * (-n);
+
+			for (var i = 0; i < tables.length; i++){
+				if (i > last || i < first)				
+					tableContainer.children[i].style.opacity = "0";
+				else				
+					tableContainer.children[i].style.opacity = "1";
+			}	
+
+			if (n > curPage)
+				for (var i = 0; i <= last; i++)
+					tableContainer.children[i].style.opacity = "1";
+
+			tableContainer.style.transform = "translateX(" + shift + "px)";
+
+			curPage = n;	
+		}
+
+		function resize(){
+			var curFirst = curPage*shownTablesNum;
+			setDisplayedNum();
+			var newPage = Math.ceil((curFirst+1)/(shownTablesNum)) - 1;
+			makeButtons();
+			for (var i = 0; i < pagesNum; i++){
+				buttonsWrap.children[i].classList.remove('buttonActive');
+			}
+			buttonsWrap.children[newPage].classList.add('buttonActive');
+			goToPage(newPage);
 		}
 	}
-
-	function goToPage (n){
-		var tw = document.getElementsByClassName('tableWrap');
-		var width = tw[1].offsetWidth + 40; // + margin left
-		var displayingNum = Math.floor(tableContainer.offsetWidth / width);
-		var pagesNum = Math.ceil(tables.length / displayingNum);
-
-		var first = (n-1)*displayingNum;
-		var last = first + displayingNum - 1;
-		if (last >= tables.length)
-			last = tables.length - 1;
-		var shift = width*displayingNum;
-		// shifting tables
-		for (var j = 0; j < tables.length; j++){
-			var cTable = tw[j];
-			if (j < first)
-				cTable.style.transform = "translateX(-" + shift + "px)";
-			if (j > last)
-				cTable.style.transform = "translateX(+" + shift + "px)";
-		}
-		for (var j = first; j <= last; j++){
-			var cTable = tw[j];
-			tw.style.left = j*width;
-		}
-
-		curPage = n;	
-	}
-});
+})();
