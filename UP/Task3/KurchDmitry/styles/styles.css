@@ -1,0 +1,87 @@
+
+table{
+  border-collapse:collapse;
+  width:100%;
+}
+body{
+  overflow: hidden;
+  background-color:#E3E3E3;
+}
+.Head{
+  text-align:center;
+  font-size:24px;
+  font-family:Helvetica;
+  font-weight:bold;
+  color:white;
+  background:linear-gradient(#333333,#555555);
+}
+.head{
+  text-align:left;
+  text-indent:5px;
+  font-size:16px;
+  font-family:Helvetica;
+  font-weight:bold;
+  color:white;
+  background:linear-gradient(#333333,#555555);
+}
+.tRheader{
+  font-size:11px;
+  font-family:Helvetica Roman;
+  background:linear-gradient(#B9B9B9,#ADADAD);
+}
+.tRcompany{
+  font-family:Helvetica Roman;
+  color:#A2A2A2;
+  font-size:14px;
+}
+.tRnumbers{
+  font-family:Helvetica Roman;
+  font-size: 17px;
+  text-align:center;
+}
+.green{
+  color:#339900;
+}
+.red{
+  color:#E80000;
+}
+.hr{
+  font-size:1px;
+  color:solid #CCCCCC;
+}
+.body_div{
+  background-color:#E3E3E3;
+  display:flex;
+  min-height: 1px;
+  width:7000px;
+}
+.table_div{
+    width:300px;
+    height: 550px;
+    margin:10px;
+    float:left;
+    overflow:auto;
+    flex-shrink: 0;
+    border-radius:15px;
+    box-shadow:0 0 3px 2px #C1C1C1;
+    border: 2px solid black;
+    background-color:#EEEEEE;
+}
+
+.buttons{
+  text-align:center;
+}
+.buttons div {
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 20px 10px;
+  width: 15px;
+  height: 15px;
+}
+.buttons .active {
+    background-color: #aaa;
+}
+.buttons *:hover {
+  background-color: #ccc;
+}
