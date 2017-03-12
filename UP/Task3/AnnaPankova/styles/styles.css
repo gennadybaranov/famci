@@ -8,9 +8,7 @@ body {
 }
 
 .wrapper {
-  flex:auto;
   display: flex;
-  position: relative;
   min-height: 1px;
   transition: transform 0.5s;
 }

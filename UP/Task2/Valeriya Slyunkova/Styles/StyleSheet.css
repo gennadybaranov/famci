@@ -1,0 +1,54 @@
+﻿body {
+	background: #EEEEEE 100% 100% no-repeat;
+}
+
+.title {
+	font-size: 50px;
+	font-family:Florence, cursive;
+	text-align: center;
+	color: #616161;
+}
+
+#field
+{
+border: 2px solid #616161;
+background-color: #B9F6CA;
+
+}
+.container
+{
+	margin-left: 460px;
+	border: 3px solid #616161;
+	background-color: #69F0AE;
+	padding: 10px 10px;
+	float:left;
+}
+.generation
+{
+	color: #616161;
+	font-size: 20px;
+	font-weight: 500px;
+}
+#generationNum
+{
+	color: #616161;
+}
+.canvas
+{
+}
+
+.button {
+	text-decoration: none;
+	color: #616161;
+	font-size: 15px;
+	padding-right: 5px;
+	border-radius: 0;
+	padding: .3em .6em;
+	border: 1px solid;
+	border-color: #616161;
+	border-radius: 2px;
+}
+.button:hover {
+	text-shadow: 1px 1px 2px black, 0 0 1em white;
+	border-color: #616161;
+}

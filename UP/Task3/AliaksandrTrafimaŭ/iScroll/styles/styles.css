@@ -1,0 +1,114 @@
+﻿html{
+	height: 100%;
+}
+
+body{
+	margin: 0;
+	height: 100%;
+}
+
+.wrap{
+	/*height: 100vh;*/
+}
+
+.pageHeader{
+	background: linear-gradient(to bottom, #333333, #555555);
+	font: bold 24px Helvetica;
+	color: white;
+	text-align: center;
+	padding: 10px;
+
+	height: 5%;
+}
+
+/* container for all tables */
+.tableContainer{
+	padding: 20px 0;
+	display: flex;
+	height: 90%;
+}
+
+/*single table container*/
+.tableWrap{
+	overflow: auto;
+	width: 350px;
+	flex-shrink: 0;
+	margin: 0 20px;
+	border-radius: 5px;
+	background: #eeeeee;
+	box-shadow: 0 0 3px 2px #c1c1c1;
+}
+
+.table{	
+	overflow: auto;
+	border-collapse: collapse;
+	font: 17px Helvetica Roman;
+	width: 100%;
+	table-layout: fixed;
+}
+
+.tableHeader{
+	font: bold 16px Helvetica;
+	background: linear-gradient(to bottom, #333333, #555555);
+	color: white;
+	padding: 5px 10px;
+}
+
+.columnsNames{
+	background: linear-gradient(to right, #b9b9b9, #adadad);
+	font: bold 11px Helvetica Roman;
+}
+
+.rowHeader{
+	color: #a2a2a2;
+	font: 14px Helvetica Roman;
+	text-align: left;
+}
+
+.info{
+	padding: 20px;
+	border-bottom: 1px solid #CACACA;
+	text-align: center;
+}
+
+.scrollBar{
+	background: linear-gradient(to bottom, #666677, #444444);
+
+	display: flex;
+	flex-direction: row;
+
+	position: fixed;
+  	bottom: 0;
+   width: 100%;
+   height: 5%;
+}
+
+.red{
+	color: #e80000;
+}
+
+.green{
+	color: #339900;
+}
+
+.buttonWrap{
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+}
+
+.button{
+	margin: 0 15px;
+	background: #e3e3e3;
+	border-radius: 50%;
+	height: 20px;
+	width: 20px;
+}
+
+.buttonHover{
+	background: #3d3d3d;
+}
+
+.buttonActive{
+	background: #D06565;
+}
