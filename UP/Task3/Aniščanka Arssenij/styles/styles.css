@@ -1,0 +1,147 @@
+﻿html{
+
+	height: 100%;
+
+}
+
+body{
+
+	margin: 0;
+	height: 100%;	
+	min-width: 900px;
+	background-color: #161616;
+
+}
+
+.wrap{
+
+	overflow-x: hidden;
+
+}
+
+.pageHeader{
+
+	background: #000000;
+	font: bold 30px lucida console;
+	color: white;
+	text-align: center;
+	padding: 15px;
+	height: 5%;
+
+}
+
+.tableContainer{
+
+	display: flex;
+	height: 100%;
+	background-color: #161616;
+	margin-bottom: 30px;
+
+}
+
+.tableWrap{
+
+	overflow: auto;
+	width: 400px;
+	flex-shrink: 0;
+	margin: 20px;
+	background: #000000;
+	border-radius: 3px;
+	padding-bottom: 5px;
+
+}
+
+.table{
+
+	border-collapse: collapse;
+	font: 18px lucida console;
+	width: 100%;
+	table-layout: fixed;
+
+}
+
+.tableHeader{
+
+	font: bold 16px lucida console;
+	background: #000000;
+	color: white;
+	padding: 5px 10px;
+
+}
+
+.columnsNames{
+
+	background: #DDDDDD;
+	font: bold 12px lucida console;
+
+}
+
+.rowHeader{
+
+	color: #DDDDDD;
+	font: 14px lucida console;
+	text-align: left;
+
+}
+
+.info{
+
+	padding: 20px;
+	border-bottom: 1px solid #DDDDDD;
+	text-align: center;
+
+}
+
+.scrollBar{
+
+	background: #000000;
+	display: flex;
+	flex-direction: row;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 5%;
+
+}
+
+.red{
+
+	color: red;
+
+}
+
+.green{
+
+	color: green;
+
+}
+
+.buttonWrap{
+
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+
+}
+
+.button{
+
+	margin: 0 15px;
+	background: white;
+	border-radius: 50%;
+	height: 20px;
+	width: 20px;
+
+}
+
+.hover{
+
+	background: #000000;
+
+}
+
+.active{
+
+	background: green;
+
+}
