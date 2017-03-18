@@ -5,15 +5,9 @@ table
     border:1px solid black;
     border-collapse: collapse;
     width:300px;
-    height: 95%;
+    height:100%;
     text-align: center;
   }
-  html, body {
-    margin: 0;
-    margin-left: 1px;
-    padding: 0;
-    height: 100%;
-}
 .title
 {
   font-size: 24px;
@@ -36,9 +30,6 @@ table
   height:35px;
   margin-bottom: 10px;
   background: -webkit-linear-gradient(top, #333333,#555555);
-}
-tr{
-  border-bottom: 1px solid #CCCCCC;
 }
 th
 {
@@ -64,7 +55,6 @@ th
   transition: transform 0.3s;
   display: inline-block;
   width: 20000px;
-  height:inherit;
 }
 .redtext
 {
@@ -78,8 +68,8 @@ th
 {
   margin-top:15px;
   transition: opacity 0.3s;
-  height: inherit;
-  overflow: auto;
+  height:600px;
+  overflow-y: auto;
   float: left;
 }
 body{
@@ -88,7 +78,6 @@ body{
 }
 .footer
 {
-  margin-top:15px;
   padding-top:7px;
   text-align: center;
   background: -webkit-linear-gradient(top, #666666,#444444);
