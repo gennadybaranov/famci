@@ -10,8 +10,14 @@ body{
 	height: 100%;	
 	min-width: 900px;
 	background-color: #161616;
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	moz-user-select: none;
+	user-select: none;
+	-indexms-user-select: none;
 
-}
+}	
 
 .wrap{
 

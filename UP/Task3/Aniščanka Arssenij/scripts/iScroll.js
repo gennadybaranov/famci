@@ -54,10 +54,10 @@
 			tableContainer.onmousemove = function(e){
 				var dx = e.clientX - startX;
 
-				tableContainer.onmouseup = function(){
+				tableContainer.onmouseup =  function(){
 
 					if(dx > 0 && curPage > 0){
-						buttnsWrap.children[curPage].classList.remove('active');
+						buttonsWrap.children[curPage].classList.remove('active');
 						goToPage(curPage - 1);
 						buttonsWrap.children[curPage].classList.add('active');
 					}
