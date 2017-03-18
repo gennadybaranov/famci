@@ -1,0 +1,104 @@
+﻿body 
+{        
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+.uptitle
+{
+   background: linear-gradient(#333333, #555555);
+  color: white;
+  text-align: center;
+  padding: 4px 20px;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.main 
+{
+  flex:auto;
+  display: flex;
+  position: relative;
+  min-height: 1px;
+  transition: transform 0.5s;
+}
+
+.tableDiv 
+{
+  width: 300px;
+  margin: 20px;
+  margin-right: 0;
+  flex-shrink: 0;
+  overflow: auto;
+  background-color: #EEEEEE;
+  border: 1px solid black;
+  transition: opacity 0.5s;
+  border-radius: 6px;
+}
+
+.tableDiv table 
+{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tableName 
+{
+ background: linear-gradient(#333333, #555555);
+  color: white;
+  text-align: left;
+  padding: 4px 20px;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+.columns 
+{
+font-weight: bold;
+  font-size: 11px;
+  font-family: "Helvetica Roman", serif;
+  background: linear-gradient(#B9B9B9, #ADADAD););
+}
+
+
+.company 
+{
+  font-size: 14px;
+  margin-left: 20px;
+  font-family: "Helvetica Roman", serif;
+  color: #A2A2A2;
+}
+
+
+.info 
+{
+  font-family: "Helvetica Roman", serif;
+  font-size: 17px;
+  text-align: center;
+}
+
+.panel {
+  margin: 0;
+  text-align: center;
+  background: linear-gradient(#333333, #555555)
+}
+
+.button {
+ background-color: #E3E3E3;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 20px 10px;
+  width: 15px;
+  height: 15px;
+}
+.button:hover
+{
+  background-color: #AAA;
+}
