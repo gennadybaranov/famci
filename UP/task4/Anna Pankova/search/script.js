@@ -2,15 +2,33 @@ document.addEventListener('DOMContentLoaded', function() {
   window.poc = {};
   window.poc.jsonData =' [ \
     { \
-      "id": "58bac7ca9bad60c729fdc62f", \
+      "id": "58bac7ca9bad60c729fdc620", \
       "imageUrl": "images/ball.jpg", \
-      "name": "Вышлв новая серия Шерлока на BBC", \
-      "description": "Чемпионат Англии " \
+      "name": "Мининформ вынес предупреждения TUT.by", \
+      "description": "Речь идет о материале: родители написали сначала..." \
     }, \
     { \
-      "id": "58bac7ca9bad60c729fdc62d", \
+      "id": "58bac7ca9bad60c729fdc621", \
+      "imageUrl": "images/ball.jpg", \
+      "name": "В Африке и в Америке", \
+      "description": "Повышение цен не затронет основых ресурсов страны" \
+    }, \
+    { \
+      "id": "58bac7ca9bad60c729fdc622", \
+      "imageUrl": "images/ball.jpg", \
+      "name": "Польша отказывается покупать", \
+      "description": "Введение санкций" \
+    }, \
+    { \
+      "id": "58bac7ca9bad60c729fdc623", \
+      "imageUrl": "images/ball.jpg", \
+      "name": "Вышла новая серия Шерлока на BBC", \
+      "description": "Новые фильмы и сериалы" \
+    }, \
+    { \
+      "id": "58bac7ca9bad60c729fdc624", \
       "imageUrl": "images/football.png", \
-      "name": "остался на поле и не забил пенальти", \
+      "name": "Остался на поле и не забил пенальти", \
       "description": "Чемпионат Франции " \
     } ] ';
 
@@ -18,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let body = document.body;
 
   let wrapper = document.getElementById('itemsWrapper')
+  wrapper.className = "wrapper"
 
   for (let i = 0; i < data.length; i++) {
 
@@ -62,4 +81,24 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   })
+
+  function nameFocus( e ) {
+    var element = e.target || window.event.srcElement;
+    if (element.value == "search") element.value = "";
+  }
+
+  function nameBlur( e ) {
+    var element = e.target || window.event.srcElement;
+    if (element.value == "") element.value = "search";
+  }
+
+  if (search.addEventListener) {
+    search.addEventListener("focus", nameFocus, false);
+    search.addEventListener("blur", nameBlur, false);
+  } else if (search.attachEvent) {
+    search.attachEvent("onfocus", nameFocus);
+    search.attachEvent("onblur", nameBlur);
+  }
+
+
 })

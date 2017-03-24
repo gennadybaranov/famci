@@ -33,7 +33,7 @@ hr.header-hr {
 
 .image {
   position: relative;
-  background-image: url('back.jpg');
+  background-image: url('images/back.jpg');
   background-size: cover;
   background-position: 50% 50%;
   height: 400px;
