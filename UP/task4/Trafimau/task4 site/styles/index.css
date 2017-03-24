@@ -1,0 +1,484 @@
+body{
+  background: #d4d6d8;
+}
+
+.wrap {
+  font-family: 'Gutami', sans-serif;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* ------- header ------- */
+
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 15px;
+  background: white;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  color: #476084;
+}
+
+.headerIcon{
+  display: flex;
+  flex-direction: row;
+  align-items:flex-end;
+}
+
+.headerIcon h1{
+  margin: 0;
+}
+
+header ul{
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+}
+
+header li{
+  list-style: none;
+  padding-right:15px;
+  padding-left:15px;
+  border-right: 1px solid #919191;
+}
+
+header li:last-child{
+  border-right: none;
+}
+
+header a{
+  text-decoration: none;
+}
+
+/* ------- end of header ------- */
+/* -------   find store  ------- */
+
+.findStore{
+  height: 350px;
+  display: flex;
+  justify-content: flex-end;
+  background-image: url("../images/city.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.findProposal{
+  align-self: flex-end;
+  flex-basis: 40%;
+  margin-right: 5%;
+  padding-bottom: 50px;
+  color: white;
+  text-shadow: -8px -1px 10px #000000;
+}
+
+.findProposalButton {
+  background-color: #ef7067; /* red */
+  border: none;
+  color:white;
+  padding: 8px 15px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  text-shadow: none;
+}
+
+.findStore a{
+  text-decoration: none;
+}
+
+/* ------- end of find store ------- */
+/* -------      shortInfo    ------- */
+
+.shortInfo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+  background: #72d4e9; /* blue */
+  color: white;
+}
+
+.infoItem{
+  flex-basis: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.infoImage{
+  flex-basis: 20%;
+  background: white;
+  margin-top: 15px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.textBlock{
+  flex-basis: 77%;
+}
+
+.textBlock h3{
+  font-weight: 600;
+}
+
+.textBlock p{
+  font-size: 16px;
+}
+
+.textBlock a{
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.textBlock a:visited{
+  color: blue;
+}
+
+/* ------- end of shortInfo ------- */
+/* -------  expertsSideBar  ------- */
+
+.expertsSideBar{
+    display: flex;
+    flex-direction: row;
+}
+
+.sideBar{
+  flex:1;
+  padding-top:12px;
+  background: white;
+}
+
+.experts {
+  flex:2.4;
+  display: flex;
+  flex-direction: column;
+   background: white;/* delete */
+}
+
+.separateExpert{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.expertPhoto{
+  flex-basis: 20%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+
+#expertPhoto1 {
+  background-image: url("../images/expert1.jpeg");
+}
+
+#expertPhoto2 {
+  background-image: url("../images/expert2.jpeg");
+}
+
+#expertPhoto3 {
+  background-image: url("../images/expert3.jpeg");
+}
+
+.expertText{
+  flex-basis:70%;
+}
+
+.expertText p{
+  font-size: 14px;
+}
+
+.expertButton {
+  background-color: #ef7067; /* red */
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.sideBarButtons{
+  height: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.sideBarButtons p{
+  margin: 0;
+  padding: 10px;
+  flex-basis: 25%;
+  border: 2px solid;
+  border-color: #919191;
+  border-bottom: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sideBarButtons p:nth-child(1){
+  background: #173f3d;
+  color: #c94851;
+  border: none;
+  margin-left: 5%;
+  margin-right: 7%;
+}
+
+.sideBarButtons p:nth-child(2){
+  margin-right: auto;
+}
+
+.sideHighlited{
+  padding: 15px;
+  margin-left: 5%;
+  margin-right: 5%;
+  background: #173f3d;
+  color: white;
+  border-bottom: none;
+}
+
+.sideHighlited h2{
+  color: #46a2c4;
+}
+
+.sideSimple{
+  border: 2px solid  #919191;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 8% 5%;
+  display:flex;
+  flex-direction: column;
+  height: 30%;
+}
+
+.sideItem{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto;
+  border-bottom: 1px solid #919191;
+}
+
+.sideItem img{
+  padding: 16px;
+  margin-right: 0;
+}
+
+.sideItem p{
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+/* ------- end of expertsSideBar ------- */
+/* -------    banner      ------- */
+
+.banner{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: #ef7067;
+  color: white;
+  padding: 30px 0;
+}
+
+.bannerContainer{
+  flex-basis: 60%;
+  text-align: center;
+}
+
+/* ------- end of banner ------- */
+/* -------      blog     ------- */
+
+.blog{
+  background: white;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+#blogHeader{
+  text-align: center;
+  margin: 0;
+  padding-top: 55px;
+  padding-bottom:25px;
+  background: white;
+}
+
+#blogSubHeader{
+  text-align: center;
+  margin: 0;
+  background: white;
+  border-top: 1px solid #e8dcbc;
+  border-bottom: 1px solid #e8dcbc;
+  color: #2a7866;
+  font-weight: 100;
+  padding: 20px;
+}
+
+.blogContent{
+  display: flex;
+  background: white;
+  justify-content: space-between;
+}
+
+.blogPosts{
+  flex-basis: 46%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.postItem{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.itemDate{
+  flex-basis: 12%;
+  display:flex;
+  flex-direction: column;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.dateDay{
+  background: #72d4e9;
+  padding: 10px 20px;
+  margin: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: 1px solid white;
+  font-size: 30px;
+}
+
+.dateMonth{
+  background: #72d4e9;
+  padding: 10px 20px;
+  margin: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 18px;
+}
+
+.itemText{
+  flex-basis: 80%;
+}
+
+.blogQuotes{
+  flex-basis: 46%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.separateQuote{
+  display: flex;
+  flex-direction: row;
+  background: #dedee0;
+}
+
+.quoteText{
+  flex-basis: 60%;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.quoteImage{
+  flex-basis: 25%;
+  margin: auto;
+  text-align: center;
+  background: white;
+  border-radius: 50%;
+}
+
+.quoteImage img{
+  padding: 20px 0;
+}
+
+/* -------  end of blog ------- */
+
+/* -------     footer   ------- */
+
+.footer{
+  background: #72d4e9;
+  color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.footerTop{
+  padding: 30px 25px;
+}
+
+.localLinks{
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 2px solid white;
+}
+
+.localLinks h3{
+  font-weight: normal;
+}
+
+.linkGroup{
+  display: flex;
+  flex-direction: column;
+}
+
+.linkGroup a{
+  line-height: 180%;
+}
+
+.footerBottom{
+  padding: 0 25px 20px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer a:link {
+    text-decoration: none;
+    color: white;
+}
+
+.footer a:visited{
+  text-decoration: none;
+  color: blue;
+}
+
+.footer a:hover {
+  text-decoration: none;
+  color: green;
+}
+
+.footer a:active {
+
+}
+
+/* -------  end of footer ------- */
