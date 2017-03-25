@@ -1,0 +1,88 @@
+﻿body {
+    background: url(http://www.pikes-peak.com/wp-content/uploads/10710249_844013735655319_2313068303288554509_o.jpg); 
+	background-attachment: fixed;
+	margin: 0 auto; 
+	padding: 0;
+	width: 1000px;
+
+    
+}
+
+#allWrapper 
+{
+    border-radius: 15px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    text-align: center;
+    background:linear-gradient(to top, black, #000022);
+    box-shadow: 10px 10px 10px #000000;
+    padding: 10px 10px;
+}
+
+#wrapper 
+{
+    
+}
+.block 
+{
+    height: 200px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 20px;
+    margin-top: 10px;
+    background: linear-gradient(to top, black, #000022);
+    border-color: #4b0082;
+
+}
+img 
+{
+    float: right;
+    margin-right: 30px;
+
+    margin-bottom: 20px;
+    width: 15%;
+    vertical-align: middle;
+}
+h1 
+{
+    font-style: italic;
+    font-family: "Georgia", serif;
+
+    margin-left: 7%;
+    font-size: 24px;
+    color: purple;
+}
+
+h2 {
+    font-style: italic;
+    font-family: "Georgia", serif;
+    margin-left: 5%;
+    font-size: 40px;
+    color: white;
+}
+
+p 
+{
+    text-align: left;
+    margin-top: -10px;
+    margin-left: 10px;
+    float: left;
+    color: white;
+}
+
+input 
+{
+    outline: none;
+    width: 80%;
+    height: 20px;
+    background-color: grey;
+    border-radius: 7px;
+    border-color: #4b0082;
+}
+
+a {
+    float: left;
+    outline: none;
+}
+#id0 {
+}
