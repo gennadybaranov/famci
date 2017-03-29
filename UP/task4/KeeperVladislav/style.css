@@ -1,0 +1,352 @@
+body
+{
+	background-image: url('back.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+.top
+{
+	background-color: SandyBrown;
+	border: 1px solid black;
+	border-radius: 5px 5px 0 0;
+	margin: auto;
+	padding: 15px;
+	width: 60%;
+}
+#name
+{
+	font: left;
+	font-family: helvetica;
+	color: white;
+
+}
+.toplinks
+{
+	float:right;
+}
+.toplink
+{
+	text-decoration: none;
+	font-family: helvetica;
+	color: white;
+	padding: 8px;
+}
+.toplink:hover {
+	text-shadow: 1px 1px 2px black, 0 0 1px white;
+	border-color: black;
+}
+.main
+{
+	margin: 0px auto 0px auto;
+	width: 830px;
+	height: 600px;
+	background: url(main.jpg) center no-repeat;
+
+}
+.social
+{
+	text-align: center;
+	padding-top:500px;
+	padding-bottom: 0px;
+}
+.log
+{
+	width: 50px;
+	height: 50px;
+	padding: 20px;
+}
+.info
+{
+	margin: auto;
+	width: 830px;
+	height: 200px;
+	padding-top:1px;
+	background-color: black;
+
+}
+h1
+{
+	font-family: helvetica;
+	color: SandyBrown;
+	text-align: center;
+}
+#maintext
+{
+	color:grey;
+	font-family: helvetica; 
+}
+#wtext
+{
+	color:white;
+}
+.infobutton
+{
+	text-align: center;
+	padding: 5px 8px 5px 8px;
+}
+
+button.infbtn
+{
+	background-color: black;
+	font-family: helvetica; 
+	padding: 10px;
+	color: SandyBrown;
+	border-radius: 2px;
+	border: 2px solid SandyBrown;
+
+}
+
+button.infbtn:hover
+{
+	color: white;
+	border-color: white;
+	cursor: pointer;
+}
+.bio
+{
+
+	margin: auto;
+	width: 830px;
+	height: 220px;
+	padding-top:1px;
+	background-color: DimGray;
+
+}
+.leftbio
+{
+	float: left;
+	text-align: left;
+	padding: 10px
+}
+.rightbio
+{
+	float: right;
+	text-align: left;
+	padding: 10px
+}
+h3
+{
+	font-family: helvetica;
+	color: SandyBrown;	
+}
+.txt
+{
+	font-family: helvetica;
+	color: RosyBrown;
+}
+button.leftbtn
+{
+	background-color: black;
+	text-decoration: none;
+	font-family: helvetica; 
+	padding: 10px;
+	color: SandyBrown;
+	border-radius: 2px;
+	border: 2px solid SandyBrown;
+
+}
+
+button.leftbtn:hover
+{
+	color: white;
+	border-color: white;
+	cursor: pointer;
+}
+.rightlinks
+{
+	font-family: helvetica;
+	color: white;
+	text-decoration: none;
+	padding: 3px;
+}
+.rightlinks:hover
+{
+	text-shadow: 1px 1px 2px black, 0 0 1px white;
+	border-color: black;
+}
+
+button.rightbtn
+{
+	background-color: black;
+	text-decoration: none;
+	font-family: helvetica; 
+	padding: 10px;
+	color: SandyBrown;
+	border-radius: 2px;
+	border: 2px solid SandyBrown;
+	margin-top: 17px;
+
+}
+
+button.rightbtn:hover
+{
+	color: white;
+	border-color: white;
+	cursor: pointer;
+}
+.portfolio
+{
+	border-top: 1px solid grey;
+	margin: auto;
+	width: 830px;
+	height: 575px;
+	padding-top:1px;
+	background-color: DimGray;
+	text-align: center;	
+}
+
+button.buttons3
+{
+	background-color: grey;
+	text-decoration: none;
+	font-family: helvetica; 
+	padding: 10px;
+	color: white;
+	border-radius: 2px;
+	border: 1px solid SandyBrown;
+	margin-top: 10px;
+
+}
+
+button.buttons3:hover
+{
+	color: white;
+	border-color: SandyBrown;
+	cursor: pointer;
+	background-color: SandyBrown; 
+}
+.photos
+{
+	margin-top: 15px;
+	float:left;
+}
+.imgs
+{
+	border-radius: 60%;
+	width: 20%;
+	border:3px solid SandyBrown;
+	padding:5px;
+	margin:auto;
+}
+.contact
+{
+	border-top: 1px solid grey;
+	margin: auto;
+	width: 830px;
+	height: 600px;
+	padding-top:1px;
+	background-color: DimGray;
+	text-align: center;	
+
+}
+.toprows
+{
+	padding: 20px 10px 30px 10px;
+}
+.leftrow
+{
+	background-color: gray;
+	border: 1px solid black;
+	width: 300px;
+	height: 25px;
+	font-family: helvetica;
+	color: RosyBrown;
+	margin-right: 20px;
+	padding: 3px;
+
+}
+.rightrow
+{
+	background-color: gray;
+	border: 1px solid black;
+	width: 300px;
+	height: 25px;
+	font-family: helvetica;
+	color: RosyBrown;
+	margin-right: 20px;
+	padding: 3px;
+}
+.botrow
+{
+	background-color: gray;
+	border: 1px solid black;
+	width: 640px;
+	height: 300px;
+	font-family: helvetica;
+	color: RosyBrown;
+	margin-right: 20px;
+	padding: 3px;
+}
+
+button.botbtn
+{
+	background-color: SandyBrown;
+	text-decoration: none;
+	font-family: helvetica; 
+	padding: 10px;
+	color: black;
+	border-radius: 2px;
+	border: 2px solid black;
+	margin-top: 10px;
+
+}
+
+button.botbtn:hover
+{
+	color: white;
+	border-color: black;
+	cursor: pointer;
+	background-color: SandyBrown; 
+}
+
+.end
+{
+	border-top: 1px solid grey;
+	margin: auto;
+	width: 830px;
+	height: 150px;
+	padding-top:1px;
+	background-color: black;
+	text-align: center;	
+}
+h2
+{
+	font-family: helvetica;
+	color: SandyBrown;	
+}
+.leftend
+{
+	float: left;
+	margin-top: 30px;
+	text-align: right;
+	padding-right: 15px;
+	width: 330px;
+}
+.rightend
+{
+	float: right;
+	margin-top: 30px;
+	text-align: left;
+	padding-left: 15px;
+	width: 330px;
+}
+
+.about
+{
+	margin: auto;
+	width: 840px;
+	height: 200px;
+	padding-top:1px;
+	background-color: black;
+
+}
+.aboutinfo
+{
+	margin: auto;
+	width: 840px;
+	height: 200px;
+	padding-top:1px;
+	background-color: black;
+
+}
