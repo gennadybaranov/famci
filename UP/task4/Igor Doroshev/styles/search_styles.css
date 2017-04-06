@@ -1,0 +1,110 @@
+body
+{
+	margin: 0;
+	background: #efefef url("C:/BSU/UP/Task4/images/bing_dark.png");
+	align-content: center;
+}
+
+.wrapper
+{
+	margin: 30px auto 30px auto;
+	font-family: Helvetica;
+	width: 700px;
+	background-color: #24232D;
+	padding-bottom: 15px;
+	border-radius: 2px;
+}
+
+input[id="searchbar"]
+{
+	margin: 10px 0px 15px 10px;
+	background-color: transparent;
+	border: 1px solid #44434D;
+	width: 350px;
+	height: 20px;
+	color: white;
+	padding: 4px 0px 4px 6px;
+
+}
+
+.back
+{
+	float: right;
+	color: black;
+	background-color: #FF9900;
+	border-radius: 3px;
+	font-size: 15px;
+	padding: 5px 5px 5px 5px;
+	border: 2px solid #FF9900;
+	margin: 10px 10px 15px 0px;
+	cursor: pointer;
+}
+
+.back:hover{	
+	background-color: black;
+	color: #FF9900;
+
+}
+
+.items
+{
+	text-align: center;
+	margin: 10px 10px 15px 10px;
+	padding-left: 0px;
+
+}
+
+.item
+{
+	list-style-type: none;
+	padding: 15px 10px 15px 10px;
+	border: 1px solid #44434D;
+}
+
+.divText
+{
+	padding-right: 20px;
+	width: 80%;
+	text-align: left;
+}
+
+.info
+{
+	margin-top: 0px;
+	margin-bottom: 5px;
+	vertical-align: top;
+}
+
+.link
+{
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+}
+
+.link:hover
+{
+	color: lightblue;
+	cursor: pointer;
+}
+
+.image
+{
+	width: 80px;
+	height: 50px;	
+	overflow: hidden;
+}
+
+.divImage
+{
+	width: 20%;
+	float:right;
+}
+
+.description
+{
+	color: gray;
+	vertical-align: bottom;
+	font-size: 12px;
+}

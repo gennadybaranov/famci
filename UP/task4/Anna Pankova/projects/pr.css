@@ -1,0 +1,114 @@
+.parent {
+  color: #52504f;
+  display: flex;
+  flex-basis: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.first {
+  margin: 20px;
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+}
+
+.second {
+  margin: 20px;
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  flex: none;
+  flex-direction: row;
+}
+
+.project1 {
+  text-align: center;
+  background-size: cover;
+  margin: 10px;
+  background-color: blue;
+}
+
+.project1:before {
+    content:'';
+    float:left;
+    padding-top:100%;
+}
+
+.project2 {
+  flex: 1 1 0;
+  background-size: cover;
+  text-align: center;
+  margin: 10px;
+  background-color: red;
+}
+
+.project2:before {
+    content:'';
+    float:left;
+    padding-top:100%;
+}
+.project2.text-bottom h1 {
+  color: white;
+  text-shadow: 0 0 40px black;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.project2.text-bottom {
+    position: relative;
+}
+
+h1:hover {
+  color: black;
+}
+
+#one {
+  background-image: url(images/first.jpeg);
+}
+#rwo {
+  background-image: url(images/two.jpeg);
+}
+#three {
+  background-image: url(images/three.jpeg);
+}
+#four {
+  background-image: url(images/four.jpeg);
+}
+#five {
+  background-image: url(images/five.jpg);
+}
+hr.header-hr {
+    align: center;
+    width: 30%;
+    color: #b0adaa;
+}
+
+section.header {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+h1.sitename {
+  font-size: 30px;
+  color: #52504f;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+div.hrefs {
+  margin-top: 30px;
+}
+.href {
+  color: #757473;
+  margin-right: 40px;
+  font-size: 12px;
+}
+.href:hover {
+  color: black;
+  cursor: pointer;
+}

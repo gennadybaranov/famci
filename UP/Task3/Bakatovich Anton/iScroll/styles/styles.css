@@ -1,0 +1,102 @@
+﻿.container {
+	padding: 20px 0;
+	display: flex;
+	height: 90%;
+}
+
+
+.header {
+	background: linear-gradient(#333333, #555555);
+	font: bold 20px Helvetica;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 11px;
+	height: 5%;
+}
+
+
+.cover {
+	overflow-x: hidden;
+}
+
+
+.table {	
+	border-collapse: collapse;
+	font: 17px Helvetica Roman;
+	width: 100%;
+	table-layout: fixed;
+}
+
+
+.tableHeader {
+	font: bold 16px Helvetica;
+	background: linear-gradient(#333333, #555555);
+	color: #FFFFFF;
+	padding: 5px 10px;
+}
+
+
+.tableCover {
+	overflow: auto;
+	width: 400px;
+	margin: 0 20px;
+	border-radius: 7px;
+	flex-shrink: 0;
+	background: #eeeeee;
+	box-shadow: 0 0 4px 2px #c1c1c1;
+}
+
+.columnName {
+	background: linear-gradient(#b9b9b9, #adadad);
+	font: bold 11px Helvetica Roman;
+}
+
+.rowHeader {
+	color: #a2a2a2;
+	font: 14px Helvetica Roman;
+	text-align: left;
+}
+
+.information {
+	padding: 20px;
+	border-bottom: 1px solid #CACACA;
+	text-align: center;
+}
+
+.scrollBar {
+	background: linear-gradient(#666666, #444444);
+	bottom: 0;
+	width: 100%;
+	height: 3.5%;
+	display: flex;
+	position: fixed;
+}
+
+.buttonCover {
+	margin: auto;
+	display: flex;
+}
+
+.button {
+	margin: 0 25px;
+	height: 25px;
+	width: 25px;
+	background: #e3e3e3;
+	border-radius: 75%;
+}
+
+.wait {
+	background: #808080;
+}
+
+.active {
+	background: #4682B4;
+}
+
+.red {
+	color: #FF0000;
+}
+
+.green {
+	color: #339900;
+}
