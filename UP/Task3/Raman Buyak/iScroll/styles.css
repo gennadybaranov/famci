@@ -1,0 +1,99 @@
+table
+{
+    -webkit-box-shadow: 0px 3px 2px #C1C1C1;
+    margin:5px;
+    border:1px solid black;
+    border-collapse: collapse;
+    width:300px;
+    height:100%;
+    text-align: center;
+  }
+.title
+{
+  font-size: 24px;
+  font-weight:  bold;
+  font-family: Helvetica;
+  color:white;
+  text-align: center;
+  padding-top:7px;
+  height:35px;
+  width:100%;
+  background: -webkit-linear-gradient(top, #333333,#555555);
+}
+.headerRow{
+  border-top-right-radius: 10px;
+  font-size: 16px;
+  font-weight:  bold;
+  font-family: "Helvetica Roman";
+  color:white;
+  padding-top:7px;
+  height:35px;
+  margin-bottom: 10px;
+  background: -webkit-linear-gradient(top, #333333,#555555);
+}
+th
+{
+  font-size: 11px;
+  font-style: bold;
+  font-family: "Helvetica Roman";
+  background: -webkit-linear-gradient(top, #B9B9B9,#ADADAD);
+}
+
+.company
+{
+  font-size: 14px;
+  font-family: helvetica;
+  color: #A2A2A2;
+  border-bottom: 1px solid;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom-color: #E3E3E3;
+}
+.wrapper
+{
+  background-color: #E3E3E3;
+  transition: transform 0.3s;
+  display: inline-block;
+  width: 20000px;
+}
+.redtext
+{
+  color:red;
+}
+.greentext
+{
+  color:green;
+}
+.wrappElem
+{
+  margin-top:15px;
+  transition: opacity 0.3s;
+  height:600px;
+  overflow-y: auto;
+  float: left;
+}
+body{
+  overflow-x: hidden;
+  background-color: #E3E3E3;
+}
+.footer
+{
+  padding-top:7px;
+  text-align: center;
+  background: -webkit-linear-gradient(top, #666666,#444444);
+}
+.scroll :hover{
+  background-color: #AAA;
+}
+.scroll{
+  background-color: #E3E3E3;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 10px 10px;
+  width: 20px;
+  height: 20px;
+}
+.clickedBtn
+{
+  background-color: #111111;
+}

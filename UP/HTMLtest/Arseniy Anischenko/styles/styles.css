@@ -1,0 +1,68 @@
+﻿body {
+
+	background: #DDDDDD;
+
+}
+
+header {
+
+
+}
+
+div.content {
+
+
+}
+
+div.column {
+
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+
+div.device {
+
+	background: white;
+	flex: 1;
+	margin: 50px;
+	padding: 8px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 5px;
+
+}
+
+div.device div.diveceName {
+
+	flex: 1;
+	font-size: 20pt;
+	font-family: 'trebuchet ms';
+
+}
+
+div.device div.description {
+
+	margin: auto;
+	flex: 1;
+	font-family: 'trebuchet ms';
+
+}
+
+div.device div.price {
+
+	flex: 1;
+	margin: 5px;
+	font-family: 'CURSIVE';
+
+}
+
+form input {
+
+	background-color: #DDDDDD;
+	border: 1px solid #5A5961;
+	width: 175px;
+	color: #5A5961;
+	border-radius: 3px;
+
+}

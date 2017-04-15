@@ -70,7 +70,7 @@ var footer = document.createElement("div");
 footer.className="footer";
 document.body.appendChild(footer);
 
-  var tablepx= 310;
+  var tablepx= 315;
   var tableCap = Math.floor(window.innerWidth/tablepx);
 
 function scrollTo(num)

@@ -1,0 +1,268 @@
+body 
+{
+	background: #efefef url(images/background.png); 
+	margin: 0; 
+	padding: 0; 
+	font: 16px/24px Arial, Tahoma, sans-serif; 
+	color: #272727; 
+}
+
+a { text-decoration: none; }
+
+a:hover { transition: all 0.5s; }
+
+/*Site structure*/
+div.mid 
+{
+	width: 1000px; 
+	margin: 0 auto; 
+}
+
+div.header { background: #101417; }
+
+div.footer 
+{
+	margin: 20px 0; 
+	text-align: center; 
+	text-transform: uppercase; 
+}
+
+/*Site header*/
+div.topmenu 
+{
+	float: right; 
+	height: 100px; 
+	line-height: 100px; 
+}
+
+div.topmenu a 
+{
+	margin: 0 0 0 10px; 
+	color: #1683a3; 
+}
+
+div.topmenu a:hover { color: #fff; }
+
+div.afisha 
+{
+	padding: 20px 50px 0 50px; 
+	background: 
+	linear-gradient(90deg, #c16a8a 100px, #a367ba 100px, #a367ba 200px, #2b798f 200px, #2b798f 300px,
+		#76a7ac 300px, #76a7ac 400px, #93ae65 400px, #93ae65 500px, #dbb16f 500px) left top repeat-x;
+	background-color: #f2f2f2;
+	background-size: 600px 15px; 
+}
+
+div.afisha img { float: left; }
+
+div.afisha h3 
+{
+	font-size: 17px; 
+	font-weight: normal; 
+	text-align: center; 
+	color: #830000; 
+}
+
+div.afisha p { text-align: center; }
+
+div.afisha a
+{ 
+	font-size: 20px; 
+	color: #fff; 
+	font-weight: bold;
+	background: #b23600; 
+	border: 1px solid #862900; 
+	padding: 5px 15px;
+	border-radius: 3px; 
+	box-shadow: 2px 2px 7px -1px #777; 
+	text-shadow: 0px 0px 3px #752300; 
+}
+
+div.afisha a:hover
+{ 
+	background: #068bac; 
+	border: 1px solid #046d88; 
+	text-shadow: 0px 0px 3px #034E61; 
+}
+
+/*Main menu*/
+div.menu 
+{
+	background: #1683a3; 
+	border: 1px solid #016c8b; 
+	border-left: none; 
+	border-right: none; 
+}
+
+div.menu ul 
+{
+	margin: 0; 
+	padding: 0; 
+	list-style: none; 
+	text-align: center; 
+}
+
+div.menu ul li 
+{
+	display: inline-block; 
+	margin: 5px 30px; 
+}
+
+div.menu ul li a 
+{
+	color: #fff;  
+	text-transform: uppercase; 
+	text-shadow: 1px 1px 3px #0b4455; 
+}
+
+div.menu ul li a:hover { color: #a3e1f3; }
+
+/*Site content*/
+div.fon 
+{
+	background: #fff; 
+	border: 1px solid #ccc; 
+	border-top: none; 
+	padding: 40px; 
+}
+
+div.fon hr.line 
+{ 
+	border: none; 
+	border-bottom: 1px dashed #ccc; 
+	height: 0; 
+	margin: 40px 0; 
+}
+
+div.block 
+{ 
+	width: 440px; 
+	float: left; 
+}
+
+div.block:nth-of-type(even) { float: right; }
+
+div.block a p { color: #272727; }
+
+div.anons 
+{
+	background: #f5f5f5; 
+	border: 1px solid #ccc; 
+	border-radius: 3px; 
+	padding: 20px; 
+}
+
+div.anons:hover 
+{
+	background: #e0eff4; 
+	border: 1px solid #b5d5dd; 
+	transition: all 1s; 
+}
+
+div.anons img 
+{
+	box-shadow: 1px 1px 5px #777; 
+	transition: transform 0.5s; 
+}
+
+div.anons:hover img { transform: scale(1.15) rotate(2deg); }
+
+div.block:nth-of-type(even) div.anons:hover img 
+{ transform: scale(1.15) rotate(-2deg); }
+
+div.anons h3 
+{
+	font-size: 20px; 
+	font-weight: normal; 
+	margin: 20px 0 10px; 
+	padding: 0; 
+	color: #01617d;
+	line-height: 20px; 
+}
+
+div.anons p { text-shadow: 1px 1px 0 #fff; }
+
+div.rek { margin: 40px 0; }
+
+div.rek img 
+{
+	border: 1px solid #ccc; 
+	border-radius: 3px; 
+	position: relative; 
+}
+
+@-webkit-keyframes jumpImage 
+{
+	0%   { top: 0;     }
+	10%  { top: 40px;  }
+	20%  { top: -30px; }
+	30%  { top: 40px;  }
+	40%  { top: -20px; }
+	50%  { top: 40px;  }
+	60%  { top: -10px; }
+	70%  { top: 40px;  }
+	80%  { top: 0;     }
+	90%  { top: 40px;  }
+	95%  { top: 20px;  }
+	100% { top: 0;     }
+}
+
+div.rek img:hover{-webkit-animation: jumpImage 2s;}
+
+h3 { text-align: center; }
+p  { text-align: center; }
+
+/*Footer*/
+div.footer span {margin: 0 20px;}
+
+div.clear{clear: both;}
+
+/*Adaptive design*/
+@media screen and (max-width: 1000px) 
+{
+	div.mid { width: 95%; }
+
+	div.afisha h3 { front-size: 22px; }
+
+	div.block { width: 48%; }
+
+	div.anons img, div.rek img { width: 100%; }
+
+	div.anons h3 { font-size: 18px; }
+}
+
+@media screen and (max-width: 640px) 
+{
+	div.header 
+	{
+		text-align: center;
+		background-position: center -130px; 
+	}
+
+	div.topmenu, div.afisha img, div.block, div.block:nth-of-type(even) 
+	{ float: none; }
+
+	div.block 
+	{ 
+		width: auto; 
+		margin-bottom: 40px; 
+	}
+
+	div.block:nth-last-of-type(2) 
+	{ margin-bottom: 0; }
+
+	div.footer span 
+	{ 
+		margin: 10px 0; 
+		display: block; 
+	}
+}
+
+div.form {
+	width: 1000px;
+	margin: auto;
+	background: #1683a3; 
+	border: 1px solid #016c8b; 
+	border-left: none; 
+	border-right: none; 
+}
