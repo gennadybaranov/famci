@@ -1,0 +1,10 @@
+C:\Users\Vladislav\Documents\Visual Studio 2010\Projects\2 sem\UP Lab 3\UP Lab 3\bin\UP Lab 3.dll
+C:\Users\Vladislav\Documents\Visual Studio 2010\Projects\2 sem\UP Lab 3\UP Lab 3\bin\UP Lab 3.pdb
+C:\Users\Vladislav\Documents\Visual Studio 2010\Projects\2 sem\UP Lab 3\UP Lab 3\obj\Debug\UP Lab 3.dll
+C:\Users\Vladislav\Documents\Visual Studio 2010\Projects\2 sem\UP Lab 3\UP Lab 3\obj\Debug\UP Lab 3.pdb
+C:\Users\Vladislav\Documents\Visual Studio 2010\Projects\2 sem\UP Lab 3\UP Lab 3\obj\Debug\UP Lab 3.csprojResolveAssemblyReference.cache
+D:\famci\UP\Task3\Vladislav Dekhtiareko\UP Lab 3\UP Lab 3\bin\UP Lab 3.dll
+D:\famci\UP\Task3\Vladislav Dekhtiareko\UP Lab 3\UP Lab 3\bin\UP Lab 3.pdb
+D:\famci\UP\Task3\Vladislav Dekhtiareko\UP Lab 3\UP Lab 3\obj\Debug\UP Lab 3.csprojResolveAssemblyReference.cache
+D:\famci\UP\Task3\Vladislav Dekhtiareko\UP Lab 3\UP Lab 3\obj\Debug\UP Lab 3.dll
+D:\famci\UP\Task3\Vladislav Dekhtiareko\UP Lab 3\UP Lab 3\obj\Debug\UP Lab 3.pdb

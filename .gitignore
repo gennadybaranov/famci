@@ -1,0 +1,4 @@
+*.obj
+*.pch
+Debug
+*.aps

@@ -1,0 +1,83 @@
+
+h5 
+{
+  font-size: 30px;
+  color: #FFFFFF;
+  margin: 2px;
+  font-family: helvetica;
+}
+
+p 
+{
+
+}
+.hr
+{
+	width: 750px;
+}
+
+.input 
+{
+	outline: none;
+	border: 2px solid #FFFFFF;
+	border-radius: 5px;
+	background: #000000 !important;
+	height: 35px;
+	width: 200px;
+	color: #FFFFFF;
+	font-size: 18px;
+	margin: 0 50px;
+}
+.input:hover
+{
+	border: 2px solid #FFA07A;
+}
+
+.mainDiv
+{
+	background-color: DimGray;
+	width: 830px;
+	margin: -10px auto 0px auto;
+}
+
+.search
+{
+	width: 500px;
+	height: 30px;
+	margin: 10px 20% 0px 20%;
+}
+.list
+{
+  list-style: none;
+
+}
+
+li 
+{
+}
+
+.txtDiv 
+{
+  display: flex;
+}
+
+.imgDiv 
+{
+  display: flex;
+  padding-right: 50px;
+
+}
+
+img 
+{
+  width: 100px;
+  height: 100px;
+
+}
+.wraper
+{
+	display: flex;
+  justify-content: space-between;
+
+	flex-direction: row;
+}

@@ -1,5 +1,9 @@
+body {
+  font-family: AteneaSansW00-Bold, sans-serif;
+}
 .header {
-  color: black;
+  color: #3D3D3D;
+  font-size: 22px;
 }
 
 .image {
@@ -13,11 +17,59 @@ img {
 }
 
 .textContent {
-
+padding-right: 20px;
 }
 
 .news {
   display:flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.description {
+  color: #aaa;
+}
+
+.wrapper {
+  margin: auto;
+  width: 60%;
+}
+
+#search {
+  margin: auto;
+  color: #ccc;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  name: "Search"
+}
+
+hr.header-hr {
+    align: center;
+    width: 30%;
+    color: #b0adaa;
+}
+
+section.header {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+h1.sitename {
+  font-size: 30px;
+  color: #52504f;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+div.hrefs {
+  margin-top: 30px;
+}
+.href {
+  color: #757473;
+  margin-right: 40px;
+  font-size: 12px;
+}
+.href:hover {
+  color: black;
+  cursor: pointer;
 }

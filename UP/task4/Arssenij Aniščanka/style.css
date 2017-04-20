@@ -1,0 +1,284 @@
+body {
+
+	background: #DCDCDC;
+	padding-top: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 50px;
+
+}
+
+header {
+
+	background: #3773B8;
+	height: auto;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+
+}
+
+nav {
+
+	display: flex;
+
+}
+
+nav a {
+
+	flex: 1;
+	text-align: center;
+	text-decoration: none;
+	font-size: 30pt;
+	font-family: 'VIVIAN';
+	color: #FFFFFF;
+	background: #3773B8;
+	border: none;
+	text-decoration: none;
+	cursor: pointer;
+	display: inline-block;
+
+}
+
+nav a.active {
+
+	background: #FFFFFF;
+	border-radius: 5px;
+	color: #3773B8;
+
+}
+
+#content {
+
+	height: auto;
+	background: #FFFFFF;
+	padding: 10px;
+
+}
+
+div.home {
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: stretch;
+	border: 3px solid #3773B8;
+	border-radius: 5px;
+	padding: 15px;
+
+}
+
+div.home div.text {
+
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	padding: 5px;
+	font-family: 'VIVIAN';
+	font-size: 14pt;
+
+}
+
+div.home div.text h1 {
+
+	font-size: 40pt;
+	text-align: center;
+
+}
+
+div.home img {
+
+	align-self: stretch;
+
+}
+
+/*///////////////////////////*/
+
+div.news {
+
+	padding: 45px;
+	padding-top: 10px;
+
+}
+
+div.news nav {
+
+	height: auto;
+	background: #3773B8;
+	border-radius: 5px;
+	padding-left: 30px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+}
+
+div.news nav h1 {
+
+	font-size: 40pt;
+	font-family: 'VIVIAN';
+	color: #FFFFFF;
+	padding-right: 15px;
+}
+
+div.news nav input {
+
+	flex-basis: 300px;
+	background-color: #FFFFFF;
+	border: 0;
+	height: 30px;
+	color: #3773B8;
+	border-radius: 5px;
+	padding-left: 5px;
+
+}
+
+div.news div.articles {
+
+	padding-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+}
+
+div.news div.articles article {
+
+	width: 500px;
+	border: 2px solid #3773B8;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+
+}
+
+div.news div.articles article h2 {
+
+	font-family: "MV BOLI";
+	font-weight: bold;
+	font-size: 22pt;
+
+}
+
+div.news div.articles article div.block {
+
+	display: flex;
+	flex-direction: row;
+
+}
+
+div.news div.articles article p {
+
+	align-self: center;
+	margin-right: 10px;
+	font-family: "trebuchet ms";
+
+
+}
+
+div.news div.articles article img {
+
+	height: 100px;
+	border: 1px solid #3773B8;
+	border-radius: 5px;
+	align-self: center;
+
+}
+
+/*///////////////////////////*/
+
+div.blogs {
+
+	padding: 45px;
+	padding-top: 10px;
+
+}
+
+div.blogs nav {
+
+	height: auto;
+	background: #3773B8;
+	border-radius: 5px;
+	padding-left: 30px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+}
+
+div.blogs nav h1 {
+
+	font-size: 40pt;
+	font-family: 'VIVIAN';
+	color: #FFFFFF;
+	padding-right: 15px;
+}
+
+div.blogs nav input {
+
+	flex-basis: 300px;
+	background-color: #FFFFFF;
+	border: 0;
+	height: 30px;
+	color: #3773B8;
+	border-radius: 5px;
+	padding-left: 5px;
+
+}
+
+div.blogs div.articles {
+
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 5px;
+	padding-top: 20px;
+	padding-bottom: 0px;
+
+}
+
+div.blogs div.articles article {
+
+	width: 300px;
+	height: auto;
+	border: 1px solid #3773B8;
+	color: #FFFFFF;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	padding: 10px;
+
+}
+
+div.blogs div.articles article h2 {
+
+	font-family: "MV BOLI";
+	font-weight: bold;
+	font-size: 22pt;
+
+}
+
+/*///////////////////////////*/
+
+footer {
+
+	height: auto;
+	padding: 5px;
+	background: #3773B8;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+footer h2 {
+
+	color: #FFFFFF;
+	font-family: "MV BOLI";
+	font-size: 14pt;
+	text-align: right;
+	margin-right: 30px;
+
+}

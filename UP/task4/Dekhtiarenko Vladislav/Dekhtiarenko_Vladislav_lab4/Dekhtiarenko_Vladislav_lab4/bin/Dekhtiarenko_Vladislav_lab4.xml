@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Dekhtiarenko_Vladislav_lab4
+</name>
+</assembly>
+<members>
+<member name="P:Dekhtiarenko_Vladislav_lab4.My.MyWebExtension.Application">
+	<summary>
+ Возвращает информацию о текущем приложении.
+ </summary>
+</member><member name="P:Dekhtiarenko_Vladislav_lab4.My.MyWebExtension.Computer">
+	<summary>
+ Возвращает сведения о главном компьютере.
+ </summary>
+</member><member name="P:Dekhtiarenko_Vladislav_lab4.My.MyWebExtension.User">
+	<summary>
+ Возвращает сведения о текущем веб-пользователе.
+ </summary>
+</member><member name="P:Dekhtiarenko_Vladislav_lab4.My.MyWebExtension.Request">
+	<summary>
+ Возвращает объект Request.
+ </summary>
+</member><member name="P:Dekhtiarenko_Vladislav_lab4.My.MyWebExtension.Response">
+	<summary>
+ Возвращает объект Response.
+ </summary>
+</member><member name="P:Dekhtiarenko_Vladislav_lab4.My.MyWebExtension.Log">
+	<summary>
+ Возвращает объект журнала ASP.
+ </summary>
+</member><member name="P:Dekhtiarenko_Vladislav_lab4.My.MyWebExtension.WebServices">
+	<summary>
+ Предоставляет доступ к веб-службам, добавленным в этот проект.
+ </summary>
+</member><member name="T:Dekhtiarenko_Vladislav_lab4.My.MyWebExtension">
+	<summary>
+ Модуль, используемый для определения свойств, доступных в My Namespace для веб-проектов.
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>
