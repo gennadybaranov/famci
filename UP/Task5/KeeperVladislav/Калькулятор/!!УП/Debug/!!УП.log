@@ -1,4 +1,5 @@
-﻿  !!УП.cpp
-e:\с++\!!уп\!!уп\!!уп.cpp(269): warning C4018: <: несоответствие типов со знаком и без знака
-  !!УП.vcxproj -> E:\С++\!!УП\Debug\!!УП.exe
-  !!УП.vcxproj -> E:\С++\!!УП\Debug\!!УП.pdb (Full PDB)
+﻿  stdafx.cpp
+  !!УП.cpp
+e:\bsu\famci\up\task5\keepervladislav\калькулятор\!!уп\!!уп.cpp(269): warning C4018: <: несоответствие типов со знаком и без знака
+  !!УП.vcxproj -> E:\BSU\famci\UP\Task5\KeeperVladislav\Калькулятор\Debug\!!УП.exe
+  !!УП.vcxproj -> E:\BSU\famci\UP\Task5\KeeperVladislav\Калькулятор\Debug\!!УП.pdb (Full PDB)
