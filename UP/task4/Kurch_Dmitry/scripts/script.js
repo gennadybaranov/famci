@@ -42,10 +42,12 @@
     var num=body_div.children.length;
     for(i=0;i<num;i++)
 		{
-			if (elements[i].description.indexOf(context)!=-1||elements[i].cake.indexOf(context)!=-1){}
+			if (elements[i].description.indexOf(context)!=-1||elements[i].cake.indexOf(context)!=-1){
+				body_div.children[i].style.display="";
+			}
 			else
 			{
-      body_div.removeChild(body_div.children[0]);
+    body_div.children[i].style.display="none";
 		  }
     }
   });
