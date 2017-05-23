@@ -213,9 +213,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	case WM_SIZE:
 		xClient = LOWORD(lParam);
 		yClient = HIWORD(lParam);
-		divide[0] = xClient / 8;
-		divide[1] = xClient / 4;
-		divide[2] = xClient/2;
+		
 		GetWindowRect(hWnd, &window);
 		break;
 	case WM_CREATE:
