@@ -52,24 +52,23 @@ void Calculator(HWND hWnd)
 	GetDlgItemText(hWnd, IDC_OPERAND2, temp, 30);
 	b = _wtof(temp);
 
-	if (SendDlgItemMessage(hWnd, IDC_ADD, BM_GETCHECK, 0, 0) == BST_CHECKED) {
+	if (IsDlgButtonChecked(hWnd, IDC_ADD)) {
 		result = a + b;
 		sign = '+';
 	}
-	else if (SendDlgItemMessage(hWnd, IDC_SUB, BM_GETCHECK, 0, 0) == BST_CHECKED) {
+	else if (IsDlgButtonChecked(hWnd, IDC_SUB)) {
 		result = a - b;
 		sign = '-';
 	}
-	else if (SendDlgItemMessage(hWnd, IDC_MUL, BM_GETCHECK, 0, 0) == BST_CHECKED) {
+	else if (IsDlgButtonChecked(hWnd, IDC_MUL)) {
 		result = a*b;
 		sign = '*';
 	}
-	else if ((SendDlgItemMessage(hWnd, IDC_DIV, BM_GETCHECK, 0, 0) == BST_CHECKED) &&
-		SendDlgItemMessage(hWnd, IDC_CHECK, BM_GETCHECK, 0, 0) == BST_CHECKED) {
+	else if (IsDlgButtonChecked(hWnd, IDC_DIV) && IsDlgButtonChecked(hWnd, IDC_CHECK)) {
 		sign = '/';
 		result = (int)(a / b);
 	}
-	else if (SendDlgItemMessage(hWnd, IDC_DIV, BM_GETCHECK, 0, 0) == BST_CHECKED) {
+	else if (IsDlgButtonChecked(hWnd, IDC_DIV)) {
 		sign = '/';
 		result = a / b;
 	}
