@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Configuration;
 using SOLIDHomework.Core.Model;
+using SOLIDHomework.Core.Tax_s;
+using SOLIDHomework.Core.ProductType;
+using SOLIDHomework.Core.Discount;
 
 namespace SOLIDHomework.Core
 {
@@ -9,10 +12,14 @@ namespace SOLIDHomework.Core
     public class ShoppingCart
     {
         private readonly List<OrderItem> _orderItems;
+        private readonly List<IDiscount> _discounts;
+        private readonly List<IProductType> _productTypes;
 
-        public ShoppingCart()
+        public ShoppingCart(List<IDiscount> discounts,List<IProductType> productTypes)
         {
             _orderItems = new List<OrderItem>();
+            _discounts = discounts;
+            _productTypes = productTypes;
         }
 
         public IEnumerable<OrderItem> OrderItems => _orderItems;
@@ -21,44 +28,32 @@ namespace SOLIDHomework.Core
         {
             _orderItems.Add(orderItem);
         }
-        
+
         public decimal TotalAmount()
         {
             decimal total = 0;
             foreach (var orderItem in OrderItems)
             {
-                decimal productPrice;
-                if (orderItem.Type == "Unit")
+                decimal productPrice = orderItem.Amount*orderItem.Price; // deafult price
+                foreach (var productType in _productTypes)
                 {
-                    productPrice = orderItem.Price;
+                    if (productType.DefineType(orderItem))
+                    {
+                        productPrice = productType.GetPrice(orderItem);
+                        break;
+                    }
+                        
                 }
-                else
+                foreach (var discount in _discounts)
                 {
-                    productPrice = orderItem.Amount*orderItem.Price;
+                  discount.ApplyDiscount(orderItem, ref productPrice);
                 }
-
-                //Calculate discount 20% for old season items
-                if (orderItem.SeasonEndDate <= DateTime.Now)
-                {
-                    productPrice = productPrice * (1 - 20 / 100M);
-                }
-
-                //calculate discount 5% if more than 4 items
-                if (orderItem.Amount > 4)
-                {
-                    productPrice = productPrice*(1 - 5/100M);
-                }
-
                 total += productPrice;
-
-                return total;
             }
 
             //calculate tax
-            if (ConfigurationManager.AppSettings["country"] == "US")
-            {
-                total += total * 0.13M;
-            }
+            TaxCalculator TaxCalculator = new TaxUS();
+            TaxCalculator.ApplyTax(ref total);
 
             return total;
         }

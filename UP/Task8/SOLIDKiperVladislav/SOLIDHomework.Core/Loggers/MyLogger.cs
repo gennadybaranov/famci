@@ -12,13 +12,13 @@ namespace SOLIDHomework.Core.Loggers
         }
         public void Write(string text)
         {
-            using (Stream file = File.OpenWrite(filePath))
-            {
-                using (StreamWriter writer = new StreamWriter(file))
-                {
-                    writer.WriteLine(text);
-                }
-            }
+            //using (Stream file = File.OpenWrite(filePath))
+            //{
+            //    using (StreamWriter writer = new StreamWriter(file))
+            //    {
+            //        writer.WriteLine(text);
+            //    }
+            //}
         }
     }
 }

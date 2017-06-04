@@ -9,52 +9,26 @@ namespace SOLIDHomework.Core
     //Order - check inventory, charge money for credit card and online payments, 
     //tips:
     //think about SRP, DI, OCP
-    //maybe for each type of payment type make sense to have own Order-based class?
-    public class OrderService
+    //maybe for each type of payment  make sense to have own Order-based class?
+
+    public interface INotifyCustomer
     {
-        private readonly InventoryService _inventoryService;
-        private readonly UserService _userService;
+        void NotifyCustomer(string username);
+    }
 
-        private readonly ILogger _logger;
+    public class NotifyCustomer : INotifyCustomer
+    {
+        private UserService _userService;
 
-        public OrderService()
+        public NotifyCustomer(UserService userService)
         {
-            _inventoryService = new InventoryService();
-            _userService = new UserService();
-            _logger = new MyLogger();
+            _userService = userService;
         }
 
-        public void Checkout(PaymentMethod paymentMethod, PaymentServiceType paymentServiceType, string username, ShoppingCart shoppingCart, PaymentDetails paymentDetails, bool notifyCustomer)
-        {
-            _logger.Write("Start checkout.");
-            switch (paymentMethod)
-            {
-                case PaymentMethod.CreditCard:
-                    ChargeCard(paymentServiceType, paymentDetails, shoppingCart);
-                    ReserveInventory(shoppingCart);
-                    _logger.Write("Success card checkout");
-                    break;
-                case PaymentMethod.Cash:
-                    ReserveInventory(shoppingCart);
-                    _logger.Write("Success cash checkout");
-                    break;
-                case PaymentMethod.OnlineOrder:
-                    ChargeCard(paymentServiceType, paymentDetails, shoppingCart);
-                    ReserveInventory(shoppingCart);
-                    if (notifyCustomer)
-                    {
-                        NotifyCustomer(username);
-                    }
-                    _logger.Write("Success online checkout");
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(paymentMethod), paymentMethod, null);
-            }
-        }
 
-        private void NotifyCustomer(string username)
+        void INotifyCustomer.NotifyCustomer(string username)
         {
-            _logger.Write(string.Format("Email will be sent to {0}", username));
+            LoggerContext.Current.Write(string.Format("Email will be sent to {0}", username));
             string customerEmail = _userService.GetByUsername(username).Email;
             if (!String.IsNullOrEmpty(customerEmail))
             {
@@ -68,8 +42,126 @@ namespace SOLIDHomework.Core
                 }
             }
         }
+    }
 
-        private void ReserveInventory(ShoppingCart cart)
+    public interface ICashOrderService
+    {
+        void Checkout(ShoppingCart cart);
+    }
+
+    public interface ICreditCartService
+    {
+        void Checkout(PaymentServiceType paymentServiceType, ShoppingCart cart, PaymentDetails PaymentDetails);
+    }
+
+    public interface IOnlineOrderService
+    {
+        void Checkout(PaymentServiceType paymentServiceType,ShoppingCart cart, PaymentDetails PaymentDetails,
+            string username, bool notifyCustomer);
+    }
+
+    public class CreditCartService : ICreditCartService
+    {
+
+        private IReserveInventoryService _reserveInventoryService;
+        private IChargeCardService _chargeCardService;
+
+        public CreditCartService(IReserveInventoryService reserveInventoryService, IChargeCardService chargeCardService)
+        {
+            _reserveInventoryService = reserveInventoryService;
+            _chargeCardService = chargeCardService;
+        }
+
+        public void Checkout(PaymentServiceType paymentServiceType, ShoppingCart cart, PaymentDetails PaymentDetails)
+        {
+            LoggerContext.Current.Write("Start checkout");
+            _reserveInventoryService.ReserveInventory(cart);
+            _chargeCardService.ChargeCard(paymentServiceType, cart, PaymentDetails);
+            LoggerContext.Current.Write("Success credit cart checkout");
+        }
+    }
+
+    public class OnlineOrderService : IOnlineOrderService
+    {
+
+        private IReserveInventoryService _reserveInventoryService;
+        private IChargeCardService _chargeCardService;
+        private INotifyCustomer _notifyCustomer;
+
+        public OnlineOrderService(IReserveInventoryService reserveInventoryService, IChargeCardService chargeCardService,
+            INotifyCustomer notifyCustomer )
+        {
+            _reserveInventoryService = reserveInventoryService;
+            _chargeCardService = chargeCardService;
+            _notifyCustomer = notifyCustomer;
+        }
+
+        public void Checkout(PaymentServiceType paymentServiceType, ShoppingCart cart, PaymentDetails PaymentDetails,
+            string username, bool notifyCustomer)
+        {
+            LoggerContext.Current.Write("Start checkout");
+            _reserveInventoryService.ReserveInventory(cart);
+            _chargeCardService.ChargeCard(paymentServiceType, cart, PaymentDetails);
+            if (notifyCustomer)
+            {
+                _notifyCustomer.NotifyCustomer(username);
+            }
+            LoggerContext.Current.Write("Success online checkout");
+        }
+    }
+
+    public interface IReserveInventoryService
+    {
+        void ReserveInventory(ShoppingCart cart);
+    }
+
+    public interface IChargeCardService
+    {
+        void ChargeCard(PaymentServiceType paymentServiceType, ShoppingCart cart, PaymentDetails PaymentDetails);
+    }
+
+    public class ChargeCardService : IChargeCardService
+    {
+        public void ChargeCard(PaymentServiceType paymentServiceType, ShoppingCart cart, PaymentDetails paymentDetails)
+        {
+            try
+            {
+                IPayment payment = PaymentFactory.GetPaymentService(paymentServiceType);
+                string serviceResponse;
+                bool result = payment.Charge(cart.TotalAmount(), new CreditCart()
+                {
+                    CardNumber = paymentDetails.CreditCardNumber,
+                    ExpiryDate = paymentDetails.ExpiryDate,
+                    NameOnCard = paymentDetails.CardholderName
+                }, out serviceResponse);
+
+                if (!result)
+                {
+                    throw new Exception(String.Format("Error on charge : {0}", serviceResponse));
+                }
+            }
+            catch (AccountBalanceMismatchException ex)
+            {
+                throw new OrderException("The card gateway rejected the card based on the address provided.", ex);
+            }
+            catch (Exception ex)
+            {
+                throw new OrderException("There was a problem with your card.", ex);
+            }
+        }
+    }
+    
+    public class ReserveInventoryService : IReserveInventoryService
+    {
+        private IInventoryService _inventoryService;
+
+
+        public ReserveInventoryService(IInventoryService inventoryService)
+        {
+            _inventoryService = inventoryService;
+        }
+
+        public void ReserveInventory(ShoppingCart cart)
         {
             foreach (OrderItem item in cart.OrderItems)
             {
@@ -87,30 +179,45 @@ namespace SOLIDHomework.Core
                 }
             }
         }
+    }
 
-        private void ChargeCard(PaymentServiceType paymentServiceType, PaymentDetails paymentDetails, ShoppingCart cart)
+    public class CashOrderService : ICashOrderService
+    {
+        private IReserveInventoryService _reserveInventoryService;
+
+
+        public CashOrderService(IReserveInventoryService reserveInventoryService)
         {
-            try
-            {
-                IPayment payment = PaymentFactory.GetPaymentService(paymentServiceType);
-                string serviceResponse;
-                bool result = payment.Charge(cart.TotalAmount(), new CreditCart
-                {
-                    CardNumber = paymentDetails.CreditCardNumber, ExpiryDate = paymentDetails.ExpiryDate, NameOnCard = paymentDetails.CardholderName
-                }, out serviceResponse);
+            _reserveInventoryService = reserveInventoryService;
+        }
 
-                if (!result)
+        public void Checkout(ShoppingCart shoppingCart)
+        {
+            LoggerContext.Current.Write("Start checkout");
+            _reserveInventoryService.ReserveInventory(shoppingCart);
+            LoggerContext.Current.Write("Success cash checkout");
+        }
+    }
+
+    public static class LoggerContext
+    {
+        private static ILogger _current;
+        private static ILogger _defaultLogger = new MyLogger();
+
+        public static ILogger Current
+        {
+            get
+            {
+                if (_current == null)
                 {
-                    throw new Exception(String.Format("Error on charge : {0}", serviceResponse));
+                    _current = _defaultLogger;
                 }
+
+                return _current;
             }
-            catch (AccountBalanceMismatchException ex)
+            set
             {
-                throw new OrderException("The card gateway rejected the card based on the address provided.", ex);
-            }
-            catch (Exception ex)
-            {
-                throw new OrderException("There was a problem with your card.", ex);
+                _current = value;
             }
         }
     }

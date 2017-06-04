@@ -3,6 +3,8 @@ using System.Configuration;
 
 namespace SOLIDHomework.Core.Payment
 {
+
+
     public static class PaymentFactory
     {
         public static IPayment GetPaymentService(PaymentServiceType serviceType)
