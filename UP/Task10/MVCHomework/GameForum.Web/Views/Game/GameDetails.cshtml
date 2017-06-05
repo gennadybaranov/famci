@@ -1,0 +1,38 @@
+﻿@model GameForum.Web.Infrastructure.Models.GameViewModel
+
+@{
+    ViewBag.Title = "GameDetails";
+}
+
+<h2>GameDetails</h2>
+
+<div>
+    <div>
+        @Html.LabelFor( x => x.Key)
+        @Html.DisplayFor( x => x.Key)
+    </div>
+    <div>
+        @Html.LabelFor( x => x.Name)
+        @Html.DisplayFor( x => x.Name)
+    </div>
+    <div>
+        @Html.LabelFor( x => x.Description)
+        @Html.DisplayFor( x => x.Description)
+    </div>
+    <div>
+        @Html.LabelFor( x => x.Genre)
+        @Html.DisplayFor( x => x.Genre)
+    </div>
+    <div>
+        @Html.LabelFor( x => x.AgeRestriction)
+        @Html.DisplayFor( x => x.AgeRestriction)
+    </div>
+</div>
+
+<div>
+    @Html.ActionLink("Download", "download", null, new { target = "_blank"})
+</div>
+
+<div>
+    @Html.ActionLink("Comments", "comments")
+</div>
