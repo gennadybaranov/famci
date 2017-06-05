@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/require")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript">
+        (function () {
+            var configs = {
+                gamesCountUrl: "@Url.Action("GamesCount", "Games")",
+                    newCommentUrl: "@Url.Action("NewComment", "Game")",
+                    genresUrl: "@Url.Action("Genres", "Games")"
+                };
+
+                var events = {
+                    loadGenresStart: 'genres-data',
+                    loadGenresCompleted: 'genres-data-result',
+                    gamesCountStart: 'games-count',
+                    gamesCountCompleted: 'games-count-result',
+                    newCommentStart: 'new-comment',
+                    newCommentCompleted: 'new-comment-result'
+                };
+
+                var settings = {
+                    gamesCountId: 'gamesCount'
+                };
+
+                require.config({
+                    paths: {
+                        'jquery': '@Url.Content("~/Scripts/jquery-1.7.1.min")',
+                        'pubsub': '@Url.Content("~/Scripts/AppScripts/pubsub")',
+                        'api': '@Url.Content("~/Scripts/AppScripts/api")',
+                        'gamesCount': '@Url.Content("~/Scripts/AppScripts/gamesCount")',
+                        'newcomment': '@Url.Content("~/Scripts/AppScripts/newcomment")',
+                        'ajaxList': '@Url.Content("~/Scripts/AppScripts/ajaxList")',
+                    }
+                });
+
+                require(['jquery', 'api', 'gamesCount'], function ($, api, gc) {
+                    $(document).ready(function () {
+                        api.init(configs, events);
+                        gc.init(settings, events);
+                    });
+                });
+            }());
+        </script>
+
+</head>
+<body>
+    <header>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>
+                <p>
+                    <label>Total game count: </label>
+                    <label id="gamesCount"></label>
+                </p>
+            </div>
+            <div class="float-right">
+                <section id="login">
+                    @Html.Partial("_LoginPartial")
+                </section>
+                <nav>
+                    <ul id="menu">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div id="body">
+        @RenderSection("featured", required: false)
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
+            </div>
+        </div>
+    </footer>
+ 
+    @RenderSection("scripts", required: false)        
+</body>
+</html>

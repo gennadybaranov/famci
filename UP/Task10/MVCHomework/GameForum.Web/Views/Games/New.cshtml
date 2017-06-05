@@ -1,0 +1,62 @@
+﻿@model GameForum.Web.Infrastructure.Models.GameViewModel
+
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>New</h2>
+
+@using(Html.BeginForm("new", "games", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor( x => x.Key)
+        @Html.EditorFor( x => x.Key)
+        @Html.ValidationMessageFor( x => x.Key)
+    </div>
+    <div>
+        @Html.LabelFor( x => x.Name)
+        @Html.EditorFor( x => x.Name)
+        @Html.ValidationMessageFor( x => x.Name)
+    </div>
+    <div>
+        @Html.LabelFor( x => x.Description)
+        @Html.TextAreaFor( x => x.Description)
+        @Html.ValidationMessageFor( x => x.Description)
+    </div>
+    <div>
+        @Html.LabelFor( x => x.Genre)
+        @Html.DropDownListFor( x => x.GenreId, Enumerable.Empty<SelectListItem>(),
+            "---loading---")
+    </div>
+    <div>
+        @Html.LabelFor( x => x.AgeRestriction)
+        @Html.EditorFor( x => x.AgeRestriction)
+        @Html.ValidationMessageFor( x => x.AgeRestriction)
+    </div>
+    
+    <input name="New Game" type="submit"/>
+}
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/customValidation")
+    <script type="text/javascript">
+        (function () {
+            var settings = {
+                genreListId: '@Html.IdFor( x => x.GenreId)'
+            };
+
+            var events = {
+                start: 'genres-data',
+                completed: 'genres-data-result'
+            };
+
+            require(['jquery', 'ajaxList'], function ($, al) {              
+
+                $(document).ready(function () {
+                    al.init($('#' + settings.genreListId), events);
+                });
+            });
+        }());
+    </script>
+}
