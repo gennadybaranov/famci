@@ -1,0 +1,12 @@
+C:\Users\Vladislav\documents\visual studio 2017\Projects\Snake-Dekhtiarenko\Snake-Dekhtiarenko\bin\Release\Snake-Dekhtiarenko.exe.config
+C:\Users\Vladislav\documents\visual studio 2017\Projects\Snake-Dekhtiarenko\Snake-Dekhtiarenko\bin\Release\Snake-Dekhtiarenko.exe
+C:\Users\Vladislav\documents\visual studio 2017\Projects\Snake-Dekhtiarenko\Snake-Dekhtiarenko\bin\Release\Snake-Dekhtiarenko.pdb
+C:\Users\Vladislav\documents\visual studio 2017\Projects\Snake-Dekhtiarenko\Snake-Dekhtiarenko\obj\Release\Snake_Dekhtiarenko.About.resources
+C:\Users\Vladislav\documents\visual studio 2017\Projects\Snake-Dekhtiarenko\Snake-Dekhtiarenko\obj\Release\Snake_Dekhtiarenko.Form1.resources
+C:\Users\Vladislav\documents\visual studio 2017\Projects\Snake-Dekhtiarenko\Snake-Dekhtiarenko\obj\Release\Snake_Dekhtiarenko.High_Scores.resources
+C:\Users\Vladislav\documents\visual studio 2017\Projects\Snake-Dekhtiarenko\Snake-Dekhtiarenko\obj\Release\Snake-Dekhtiarenko.csproj.GenerateResource.Cache
+C:\Users\Vladislav\documents\visual studio 2017\Projects\Snake-Dekhtiarenko\Snake-Dekhtiarenko\obj\Release\Snake-Dekhtiarenko.exe
+C:\Users\Vladislav\documents\visual studio 2017\Projects\Snake-Dekhtiarenko\Snake-Dekhtiarenko\obj\Release\Snake-Dekhtiarenko.pdb
+C:\Users\Vladislav\documents\visual studio 2017\Projects\Snake-Dekhtiarenko\Snake-Dekhtiarenko\obj\Release\Snake_Dekhtiarenko.EnterName.resources
+C:\Users\Vladislav\documents\visual studio 2017\Projects\Snake-Dekhtiarenko\Snake-Dekhtiarenko\obj\Release\Snake_Dekhtiarenko.Properties.Resources.resources
+C:\Users\Vladislav\documents\visual studio 2017\Projects\Snake-Dekhtiarenko\Snake-Dekhtiarenko\obj\Release\Snake-Dekhtiarenko.csprojResolveAssemblyReference.cache
