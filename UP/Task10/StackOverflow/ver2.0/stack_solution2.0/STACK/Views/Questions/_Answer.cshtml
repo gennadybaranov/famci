@@ -1,0 +1,19 @@
+﻿@model STACK.Models.Answer
+
+<div>
+    <hr/>
+    <b>Text of answer</b>
+    <p>@Model.Text</p>
+    @if (Model.ApplicationUser != null)
+    {
+        <b>Answered by</b>
+        <p>@Model.ApplicationUser.UserName</p>
+    }
+    else
+    {
+        <p>Unauthorized user</p>
+    }
+    <b>Answer Date:</b>
+    <p>@Model.Date</p>
+</div>
+
