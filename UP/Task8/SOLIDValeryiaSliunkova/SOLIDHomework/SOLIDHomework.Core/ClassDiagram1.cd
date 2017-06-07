@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SOLIDHomework.Core.Calculator.BaseOrderCalculator" Collapsed="true">
+    <Position X="5.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAACBAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Calculator\BaseOrderCalculator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SOLIDHomework.Core.Calculator.TaxCalculator" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Calculator\TaxCalculator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SOLIDHomework.Core.Calculator.TotalCalculator" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Calculator\TotalCalculator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SOLIDHomework.Core.Calculator.UnitCalculator" Collapsed="true">
+    <Position X="7.25" Y="1.5" Width="1.5" />
+    <InheritanceLine Type="SOLIDHomework.Core.Calculator.BaseOrderCalculator" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="1.562" />
+        <Point X="6.25" Y="1.875" />
+        <Point X="7.25" Y="1.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Calculator\UnitCalculator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SOLIDHomework.Core.Calculator.WeightCalculator" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <InheritanceLine Type="SOLIDHomework.Core.Calculator.BaseOrderCalculator" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="1" />
+        <Point X="6.25" Y="0.812" />
+        <Point X="7.25" Y="0.812" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Calculator\WeightCalculator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SOLIDHomework.Core.Discount.PacketDiscount" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Discount\PacketDiscount.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SOLIDHomework.Core.Discount.SeasonDiscount" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Discount\SeasonDiscount.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="SOLIDHomework.Core.Calculator.ICalculator" Collapsed="true">
+    <Position X="11" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Calculator\ICalculator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SOLIDHomework.Core.Calculator.ITaxCalculator" Collapsed="true">
+    <Position X="9.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Calculator\ITaxCalculator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SOLIDHomework.Core.Discount.IDiscount" Collapsed="true">
+    <Position X="13" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Discount\IDiscount.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
