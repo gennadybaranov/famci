@@ -1,0 +1,46 @@
+﻿@model IEnumerable<STACK.Models.Question>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Text:
+        </th>
+        <th>
+            Number of Answers:
+        </th>
+        <th>
+            Date:
+        </th>
+        <th>
+            Asked by:
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink((item.Text), "Details", "Questions", new { id = item.Id }, null)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Answers.Count)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApplicationUser.UserName)
+        </td>
+    </tr>
+}
+
+</table>
