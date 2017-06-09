@@ -1,0 +1,109 @@
+body
+{
+	margin: 0;
+	background: #efefef url("E:/BSU/famci/UP/task4/Andrey Bulak/images/12.png");
+	align-content: center;
+}
+
+.wrapper
+{
+	width: 800px;
+	margin: 30px auto 30px auto;
+	background-color: #010103;
+	padding-bottom: 20px;
+	border-radius: 2px;
+}
+
+input[id="searchbar"]
+{
+	margin: 10px 0px 15px 10px;
+	background-color: transparent;
+	border: 1px solid #FFA500;
+	width: 400px;
+	height: 20px;
+	color: white;
+	padding: 4px 0px 4px 6px;
+
+}
+
+.back
+{
+	float: right;
+	color: black;
+	background-color: #FFA500;
+	border-radius: 3px;
+	font-size: 20px;
+	padding: 3px 3px 3px 3px;
+	border: 3px solid #FFA500;
+	margin: 10px 15px 15px 0px;
+	cursor: pointer;
+}
+
+.back:hover{	
+	background-color: black;
+	color: #FFA500;
+
+}
+
+.items
+{
+	text-align: center;
+	margin: 10px 10px 15px 10px;
+	padding-left: 0px;
+
+}
+
+.item
+{
+	list-style-type: none;
+	padding: 15px 10px 15px 10px;
+	border: 1px solid #FFA500;
+}
+
+.divText
+{
+	padding-right: 20px;
+	width: 80%;
+	text-align: left;
+}
+
+.info
+{
+	margin-top: 0px;
+	margin-bottom: 5px;
+	vertical-align: top;
+}
+
+.link
+{
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+}
+
+.link:hover
+{
+	color: grey;
+	cursor: pointer;
+}
+
+.image
+{
+	width: 80px;
+	height: 50px;	
+	overflow: hidden;
+}
+
+.divImage
+{
+	width: 20%;
+	float:right;
+}
+
+.description
+{
+	color: gray;
+	vertical-align: bottom;
+	font-size: 12px;
+}

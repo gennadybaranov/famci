@@ -1,0 +1,114 @@
+﻿body {
+	overflow: hidden;
+	margin: 3px;
+	padding: 3px;
+	display: flex;
+	flex-direction: column;
+	max-height: 120vh;
+	background-color: grey;
+}
+
+.header {
+	background: linear-gradient(#593CFF, #19FFE8);
+	color: #000000;
+	text-align: center;
+	padding: 10px 0;
+	margin: 10px;
+	border-radius: 3px;
+	font-family: "Times";
+	font-stretch: ultra-condensed;
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.disp {
+  flex:auto;
+  display: flex;
+  position: relative;
+  min-height: 1px;
+  transition: transform 0.5s;
+}
+
+.disp .dispTable {
+	max-height: 80vh;
+  width: 255px;
+  height: 520px;
+  margin: 8px;
+  margin-right: 0;
+  flex-shrink: 0;
+  overflow: auto;
+  background-color: #ffffff;
+  border: 1px solid #8CFFFF;
+  transition: opacity 0.3s;
+  border-radius: 3px;
+}
+
+.disp .dispTable table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#title {
+  background: linear-gradient(#593CFF, #19FFE8);
+  color: #EFEBE9;
+  text-align: left;
+  padding: 7px 18px;
+  font-family: "Times";
+  font-stretch: ultra-condensed;
+  font-size: 16px;
+  font-weight: 600;
+}
+#title:hover {
+	text-shadow: 0.8px 0.8px 2px white, 0 0 3em #FFC505;
+	font-size: 16.3px;
+}
+
+#columns {
+  font: 13px "Times";
+  background: linear-gradient(#593CFF, #19FFE8);
+}
+
+.section {
+  width: 30%;
+}
+
+.firmName {
+  font-size: 14px;
+  margin-left: 20px;
+  font-family: "Times";
+  color: black;
+}
+.firmName:hover {
+	text-shadow: 0.4px 0.4px 0.6px black, 0 0 0.3em #FFC505;
+}
+
+.value {
+  font-family: "Times";
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.hr {
+  height: 0.5px;
+  background-color: #8CFFFF;
+}
+
+.buttons {
+	margin: 0;
+	text-align: center;
+}
+
+.button {
+  background-color: #19FFE8;
+  border-radius: 200px;
+  border-color: #593CFF;
+  display: inline-block;
+  margin: 2px;
+  width: 3px;
+  height: 15px;
+}
+
+.button:hover {
+  background-color: grey;
+}
