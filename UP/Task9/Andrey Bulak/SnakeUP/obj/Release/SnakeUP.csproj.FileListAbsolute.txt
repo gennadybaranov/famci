@@ -1,0 +1,11 @@
+C:\Users\Andrey\Documents\Visual Studio 2013\Projects\SnakeUP\SnakeUP\bin\Release\SnakeUP.exe.config
+C:\Users\Andrey\Documents\Visual Studio 2013\Projects\SnakeUP\SnakeUP\bin\Release\SnakeUP.exe
+C:\Users\Andrey\Documents\Visual Studio 2013\Projects\SnakeUP\SnakeUP\bin\Release\SnakeUP.pdb
+C:\Users\Andrey\Documents\Visual Studio 2013\Projects\SnakeUP\SnakeUP\obj\Release\SnakeUP.Properties.Resources.resources
+C:\Users\Andrey\Documents\Visual Studio 2013\Projects\SnakeUP\SnakeUP\obj\Release\SnakeUP.csproj.GenerateResource.Cache
+C:\Users\Andrey\Documents\Visual Studio 2013\Projects\SnakeUP\SnakeUP\obj\Release\SnakeUP.exe
+C:\Users\Andrey\Documents\Visual Studio 2013\Projects\SnakeUP\SnakeUP\obj\Release\SnakeUP.pdb
+C:\Users\Andrey\Documents\Visual Studio 2013\Projects\SnakeUP\SnakeUP\obj\Release\SnakeUP.csprojResolveAssemblyReference.cache
+C:\Users\Andrey\Documents\Visual Studio 2013\Projects\SnakeUP\SnakeUP\obj\Release\SnakeUP.StartMenu.resources
+C:\Users\Andrey\documents\visual studio 2013\Projects\SnakeUP\SnakeUP\obj\Release\SnakeUP.SnakeGame.resources
+C:\Users\Andrey\documents\visual studio 2013\Projects\SnakeUP\SnakeUP\obj\Release\SnakeUP.BestScores.resources

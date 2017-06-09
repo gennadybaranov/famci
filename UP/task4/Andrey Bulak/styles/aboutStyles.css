@@ -1,0 +1,116 @@
+body
+{
+	margin: 0;
+	background: #efefef url("E:/BSU/famci/UP/task4/Andrey Bulak/images/12.png");
+	align-content: center;
+}
+
+.wrapper
+{
+	margin: 30px auto 0px auto;
+	font-family: Helvetica;
+	width: 700px;
+	background-color: #24232D;
+	padding-bottom: 15px;
+	padding-top: 10px;
+	border-radius: 2px;
+	overflow: hidden;
+}
+
+.header
+{
+	color: #FFA500;
+	font-size: 22px;
+	margin: 0px 0px 15px 15px;
+}
+
+.back
+{
+	float: right;
+	color: black;
+	background-color: #FFA500;
+	border-radius: 3px;
+	font-size: 15	px;
+	padding: 3px 3px 3px 3px;
+	border: 3px solid #FFA500;
+	margin: 0px 10px 10px 0px;
+	cursor: pointer;
+}
+
+.back:hover{	
+	background-color: black;
+	color: #FFA500;
+
+}
+
+.content
+{
+	margin: 15px 15px 15px 15px;
+}
+
+.text
+{
+	color: gray;
+	font-size: 14px;
+}
+
+.maintext
+{
+	/*width: 60%;*/
+}
+
+.tableWrapper
+{
+	margin-left: 10px;
+	margin-bottom: 10px;
+	float: right;
+	width: 50%;
+	border: 1px solid #FFA500;;
+	align-content: center;
+}
+
+.table
+{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.image
+{
+	width: 260px;
+	height: 150px;
+	margin: 15px 20px 15px 20px;
+}
+
+.tdimage
+{
+	text-align: center;
+}
+
+.tdtext
+{
+	float: right;
+	padding-right: 30px;
+	width: 85%;
+	padding-bottom: 10px;
+}
+
+.link:hover
+{
+	color: lightblue;
+}
+
+th
+{
+	padding-left: 15px;
+	text-align: left;
+	vertical-align: top;
+	color: orange;
+}
+
+.miniheader
+{
+	color: #FFA500;
+	font-size: 18px;
+	margin-bottom: 10px;
+}

@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h2>Stack Overflow</h2>
+    <p class="lead">Stack Overflow is a place where you can exchange your experience in software and web developing. It's a part of the world's most popular platform to ask and to get answers.</p>
+    @Html.ActionLink("Ask Question", "Create", "Questions")
+</div>
+
+@model IEnumerable<STACK.Models.Question>
+
+@{
+    ViewBag.Title = "Stack Overflow";
+}
+
+<div class="container">
+    @foreach (var item in Model)
+    {
+        
+        <div style="height:200px;" class="col-md-6" id="@Html.DisplayFor(modelItem => item.Id)">
+            <hr />
+            <h2>@Html.ActionLink((item.Text), "Details", "Questions", new { id = item.Id }, null)</h2>
+            <div class="row">
+                <div class="col-md-5">Asked by: @Html.DisplayFor(modelItem => item.ApplicationUser.UserName)</div>
+                <div calss="col-md-5">Date: @Html.DisplayFor(modelItem => item.Date)</div>  
+            </div>
+            <strong>Answers: @Html.DisplayFor(modelItem => item.Answers.Count)</strong>
+        </div>
+        
+    }
+</div>

@@ -1,0 +1,26 @@
+﻿@model STACK.Models.Question
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div>
+    <h2>Are you sure you want to delete this question?</h2>
+    <hr />
+    <h3>@Html.DisplayFor(model => model.Text)</h3>
+    <div>
+        <strong>@Html.DisplayNameFor(model => model.Date)</strong>:
+        @Html.DisplayFor(model => model.Date)
+    </div>
+    <br/>
+</div>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Delete" class="btn btn-default" />
+        <strong>@Html.ActionLink("Back to List", "Index")</strong>
+    </div>
+}
+
