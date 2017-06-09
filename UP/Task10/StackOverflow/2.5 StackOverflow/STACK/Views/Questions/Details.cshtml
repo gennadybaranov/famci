@@ -1,0 +1,59 @@
+﻿@model STACK.ViewModels.QuestionAnswerViewModel
+
+@{
+    ViewBag.Title = "Details of the question";
+}
+
+
+<div class="jumbotron">
+    <h1>@Html.DisplayFor(model => model.Question.Text)</h1>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Question.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Question.Date)
+        </dd>
+
+        <dt>
+            Asked By
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Question.ApplicationUser.UserName)
+        </dd>
+
+    </dl>
+</div>
+
+
+<h1>Answers to the question</h1>
+@foreach (var ans in Model.Question.Answers)
+{
+    @Html.Partial("_Answer", ans)
+}
+
+
+
+
+@if (User.Identity.IsAuthenticated)
+{
+    @*
+    @Html.ActionLink("Edit Question", "Edit", new { id = Model.Question.Id }) |
+    @Html.ActionLink("Delete Question", "Delete", new { id = Model.Question.Id }) |
+    @Html.ActionLink("Back to Questions", "Index")
+    *@
+    <div class="jumbotron col-md-5 col-md-offset-7">
+        <h2>Leave your answer</h2>
+        @Html.Partial("_AnswerForm", Model.NewAnswer)
+    </div>
+}
+else
+{
+    <p>
+        @Html.ActionLink("Back to Questions", "Index")
+    </p>
+}
+
+

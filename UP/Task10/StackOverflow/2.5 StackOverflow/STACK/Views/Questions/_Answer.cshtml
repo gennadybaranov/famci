@@ -1,0 +1,24 @@
+﻿@model STACK.Models.Answer
+
+<div class="col-md-12" id="@Model.Id">
+    <hr/>
+    <h2>@Model.Text</h2>
+    <div class="row">
+        <div class="col-md-3">
+            Asked by:
+            @if (Model.ApplicationUser != null)
+            {
+                @Model.ApplicationUser.UserName
+            }
+            else
+            {
+                <p>"Unauthorized user"</p>
+            }
+        </div>
+        <div calss="col-md-3">Date: @Model.Date</div>
+    </div>
+    <br/>
+    <hr />
+    <br />
+</div>
+
