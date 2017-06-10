@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SOLIDHomework.Core.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LogFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\УП\SOLIDHomework\SOLIDHomework.Core\app.config</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
